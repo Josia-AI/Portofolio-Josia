@@ -1,0 +1,343 @@
+<!-- =========================================================
+     projects/spreadsheet-system.html
+     PROJECT 02 — BUSINESS AUTOMATION
+     ========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreadsheet Business Automation — Josia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-page">
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="loader-text">JOSIA<span>.</span></div>
+</div>
+
+<div id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="../index.html" class="navbar-brand">J<span>.</span></a>
+        
+        <div class="d-flex align-items-center gap-3 gap-lg-4">
+            <button id="langToggle" class="theme-toggle" style="font-size: 0.85rem; font-weight: 800;">EN / ID</button>
+            <button id="themeToggle" class="theme-toggle"><i class="bi bi-moon-stars"></i></button>
+            <a href="../index.html" class="back-link ms-2"><i class="bi bi-arrow-left"></i> Back</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="project-hero">
+    <div class="container">
+        <div class="project-page-label reveal">TFT CREATION TEXTILE / 02</div>
+        <h1 class="reveal">
+            <span class="lang-en">Business Automation &<br><em>Spreadsheet System.</em></span>
+            <span class="lang-id">Otomatisasi Bisnis &<br><em>Sistem Spreadsheet.</em></span>
+        </h1>
+        <p class="reveal">
+            <span class="lang-en">A custom spreadsheet-based operational system designed to digitize manual administrative workflows, document tracking, inventory management, and reporting processes.</span>
+            <span class="lang-id">Sistem operasional berbasis spreadsheet kustom yang dirancang untuk mendigitalkan alur kerja administrasi manual, pelacakan dokumen, manajemen inventaris, dan proses pelaporan.</span>
+        </p>
+    </div>
+</section>
+
+<!-- HERO MEDIA -->
+<section class="project-media">
+    <div class="container">
+        <div class="large-image reveal">
+            <!-- Adjusted class for better image handling -->
+            <img class="img-fluid hero-image-adjust" src="../assets/images/spreadsheet/spreadsheet-dashboard.jpg" alt="Spreadsheet system dashboard">
+        </div>
+    </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="project-section">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4 reveal">
+                <div class="project-section-number">
+                    <span class="lang-en">THE PROBLEM</span>
+                    <span class="lang-id">MASALAH UTAMA</span>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <p class="project-big-text reveal">
+                    <span class="lang-en">Manual administrative processes can create duplicated work, inconsistent records, document numbering problems, and stock discrepancies.</span>
+                    <span class="lang-id">Proses administrasi manual dapat menyebabkan pekerjaan ganda, catatan yang tidak konsisten, masalah penomoran dokumen, dan selisih stok barang.</span>
+                </p>
+                <p class="project-text reveal">
+                    <span class="lang-en">The solution was to build a centralized spreadsheet workflow that connects operational documents and inventory information into a more structured system.</span>
+                    <span class="lang-id">Solusinya adalah membangun alur kerja spreadsheet terpusat yang menghubungkan dokumen operasional dan informasi inventaris ke dalam sistem yang lebih terstruktur.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM FLOW -->
+<section class="system-flow">
+    <div class="container">
+        <div class="project-section-title light reveal">
+            <div class="section-kicker">
+                <span class="lang-en">SYSTEM FLOW</span>
+                <span class="lang-id">ALUR SISTEM</span>
+            </div>
+            <h2>
+                <span class="lang-en">From order to archive.</span>
+                <span class="lang-id">Dari pesanan hingga arsip.</span>
+            </h2>
+        </div>
+        <div class="flow">
+            <div class="reveal">
+                <div class="flow-number">01</div>
+                <strong>PO</strong>
+                <small>Pre-Order</small>
+            </div>
+            <i class="bi bi-arrow-right reveal"></i>
+            <div class="reveal">
+                <div class="flow-number">02</div>
+                <strong>DO</strong>
+                <small>Delivery Order</small>
+            </div>
+            <i class="bi bi-arrow-right reveal"></i>
+            <div class="reveal">
+                <div class="flow-number">03</div>
+                <strong>SJ</strong>
+                <small>Surat Jalan</small>
+            </div>
+            <i class="bi bi-arrow-right reveal"></i>
+            <div class="reveal">
+                <div class="flow-number">04</div>
+                <strong>INV</strong>
+                <small>Invoice</small>
+            </div>
+            <i class="bi bi-arrow-right reveal"></i>
+            <div class="reveal">
+                <div class="flow-number">05</div>
+                <strong>ARCHIVE</strong>
+                <small>Reporting</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM SCREENSHOTS -->
+<section class="project-section">
+    <div class="container">
+        <div class="project-section-title reveal">
+            <div class="section-kicker">
+                <span class="lang-en">SYSTEM SCREENSHOTS</span>
+                <span class="lang-id">TANGKAPAN LAYAR</span>
+            </div>
+            <h2>
+                <span class="lang-en">Every module has a purpose.</span>
+                <span class="lang-id">Setiap modul punya tujuan.</span>
+            </h2>
+        </div>
+        <div class="system-gallery">
+            <div class="system-screen reveal">
+                <div class="img-wrapper">
+                     <img src="../assets/images/spreadsheet/spreadsheet-po.jpeg" alt="PO spreadsheet system" class="img-contain">
+                </div>
+                <div class="screen-info">
+                    <div class="screen-number">01</div>
+                    <h3 class="screen-title">
+                        <span class="lang-en">Pre-Order Management</span>
+                        <span class="lang-id">Manajemen Pre-Order</span>
+                    </h3>
+                    <p class="screen-desc">
+                        <span class="lang-en">Centralized PO data for tracking customer orders.</span>
+                        <span class="lang-id">Data PO terpusat untuk melacak pesanan pelanggan.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="system-screen reveal">
+                 <div class="img-wrapper">
+                    <img src="../assets/images/spreadsheet/spreadsheet-do.jpeg" alt="DO spreadsheet system" class="img-contain">
+                 </div>
+                <div class="screen-info">
+                    <div class="screen-number">02</div>
+                    <h3 class="screen-title">Delivery Order</h3>
+                    <p class="screen-desc">
+                        <span class="lang-en">Tracking processing, completed, and canceled DO statuses.</span>
+                        <span class="lang-id">Melacak status DO yang diproses, selesai, maupun dibatalkan.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="system-screen reveal">
+                 <div class="img-wrapper">
+                    <img src="../assets/images/spreadsheet/spreadsheet-inventory.jpeg" alt="Inventory spreadsheet system" class="img-contain">
+                 </div>
+                <div class="screen-info">
+                    <div class="screen-number">03</div>
+                    <h3 class="screen-title">
+                        <span class="lang-en">Inventory Management</span>
+                        <span class="lang-id">Manajemen Inventaris</span>
+                    </h3>
+                    <p class="screen-desc">
+                        <span class="lang-en">Real-time stock deduction and inventory tracking.</span>
+                        <span class="lang-id">Pengurangan stok secara real-time dan pelacakan inventaris.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="system-screen reveal">
+                 <div class="img-wrapper">
+                    <img src="../assets/images/spreadsheet/spreadsheet-invoice.jpeg" alt="Invoice spreadsheet system" class="img-contain">
+                 </div>
+                <div class="screen-info">
+                    <div class="screen-number">04</div>
+                    <h3 class="screen-title">
+                        <span class="lang-en">Invoice & Payment</span>
+                        <span class="lang-id">Faktur & Pembayaran</span>
+                    </h3>
+                    <p class="screen-desc">
+                        <span class="lang-en">Payment terms and invoice tracking within a centralized database.</span>
+                        <span class="lang-id">Pelacakan termin pembayaran dan faktur dalam database terpusat.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM DEMONSTRATION -->
+<section class="video-section">
+    <div class="container">
+        <div class="project-section-title light reveal">
+            <div class="section-kicker">
+                <span class="lang-en">SYSTEM DEMONSTRATION</span>
+                <span class="lang-id">DEMONSTRASI SISTEM</span>
+            </div>
+            <h2>
+                <span class="lang-en">See the workflow.</span>
+                <span class="lang-id">Lihat alur kerjanya.</span>
+            </h2>
+        </div>
+        <div class="video-container reveal">
+            <video class="portfolio-video" controls playsinline preload="metadata">
+                <source src="../assets/videos/spreadsheet-system.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM FEATURES -->
+<section class="project-section">
+    <div class="container">
+        <div class="project-section-title reveal">
+            <div class="section-kicker">
+                <span class="lang-en">SYSTEM FEATURES</span>
+                <span class="lang-id">FITUR SISTEM</span>
+            </div>
+            <h2>
+                <span class="lang-en">Designed around operations.</span>
+                <span class="lang-id">Dirancang untuk operasional.</span>
+            </h2>
+        </div>
+        <div class="responsibility-grid">
+            <div class="reveal">
+                <div class="grid-number">01</div>
+                <h3 class="grid-title">
+                    <span class="lang-en">Automated Documents</span>
+                    <span class="lang-id">Dokumen Otomatis</span>
+                </h3>
+                <p class="grid-desc">
+                    <span class="lang-en">PO, DO, Surat Jalan, Receipts, and Tax Invoices.</span>
+                    <span class="lang-id">PO, DO, Surat Jalan, Kwitansi, dan Faktur Pajak.</span>
+                </p>
+            </div>
+            <div class="reveal">
+                <div class="grid-number">02</div>
+                <h3 class="grid-title">
+                    <span class="lang-en">Inventory Deduction</span>
+                    <span class="lang-id">Potong Stok Real-time</span>
+                </h3>
+                <p class="grid-desc">
+                    <span class="lang-en">Stock automatically reflects operational transactions.</span>
+                    <span class="lang-id">Stok otomatis menyesuaikan dengan transaksi operasional harian.</span>
+                </p>
+            </div>
+            <div class="reveal">
+                <div class="grid-number">03</div>
+                <h3 class="grid-title">
+                    <span class="lang-en">Document Number Control</span>
+                    <span class="lang-id">Kontrol Nomor Dokumen</span>
+                </h3>
+                <p class="grid-desc">
+                    <span class="lang-en">Helps prevent duplicate document numbers.</span>
+                    <span class="lang-id">Sistem terpusat mencegah duplikasi nomor dokumen.</span>
+                </p>
+            </div>
+            <div class="reveal">
+                <div class="grid-number">04</div>
+                <h3 class="grid-title">DO Status</h3>
+                <p class="grid-desc">
+                    <span class="lang-en">Processing, completed, and canceled status tracking.</span>
+                    <span class="lang-id">Pelacakan status DO mulai dari diproses, selesai, hingga batal.</span>
+                </p>
+            </div>
+            <div class="reveal">
+                <div class="grid-number">05</div>
+                <h3 class="grid-title">
+                    <span class="lang-en">Payment Tracking</span>
+                    <span class="lang-id">Pelacakan Pembayaran</span>
+                </h3>
+                <p class="grid-desc">
+                    <span class="lang-en">Centralized payment terms and invoice monitoring.</span>
+                    <span class="lang-id">Pemantauan faktur dan termin pembayaran terpusat.</span>
+                </p>
+            </div>
+            <div class="reveal">
+                <div class="grid-number">06</div>
+                <h3 class="grid-title">
+                    <span class="lang-en">Reporting Archive</span>
+                    <span class="lang-id">Arsip Pelaporan</span>
+                </h3>
+                <p class="grid-desc">
+                    <span class="lang-en">Structured records for administrative reporting.</span>
+                    <span class="lang-id">Catatan terstruktur untuk pelaporan manajerial & administratif.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <span>© 2026 Josia Joseph Ntahudi</span>
+            <a href="../index.html">
+                <span class="lang-en">Back to Portfolio</span>
+                <span class="lang-id">Kembali ke Portofolio</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<button id="backTop" class="magnetic">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
