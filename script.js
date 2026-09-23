@@ -153,9 +153,12 @@ class TypeWriter {
 window.addEventListener('load', () => {
     const elements = document.getElementsByClassName('typewrite');
     for (let i = 0; i < elements.length; i++) {
-        const toRotate = elements[i].getAttribute('data-type');
-        const period = elements[i].getAttribute('data-period');
-        if (toRotate) new TypeWriter(elements[i], JSON.parse(toRotate), period);
+        // Jangan jalankan animasi jika elemennya disembunyikan oleh CSS
+        if (window.getComputedStyle(elements[i]).display !== 'none') {
+            const toRotate = elements[i].getAttribute('data-type');
+            const period = elements[i].getAttribute('data-period');
+            if (toRotate) new TypeWriter(elements[i], JSON.parse(toRotate), period);
+        }
     }
 });
 
