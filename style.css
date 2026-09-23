@@ -168,7 +168,7 @@ body.dark-mode .hero-grid {
 .contact-form input, .contact-form textarea { width: 100%; background: transparent !important; border: none; border-bottom: 1px solid #333 !important; color: #fff !important; padding: 15px 0; margin-bottom: 25px; outline: none; font-size: 1rem; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #888 !important; }
 .contact-form input:focus, .contact-form textarea:focus { border-bottom-color: #fff !important; }
-.contact-form button { background: #fff !important; color: #000 !important; border: none; padding: 18px 35px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; margin-top: 10px; }
+.contact-form button { background: #fff !important; color: #000 !important; border: none; padding: 18px 35px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; margin-top: 10px; white-space: nowrap; }
 .contact-form button:hover { opacity: 0.8; }
 
 footer { padding: 60px 0; background: #000 !important; color: #fff !important; border-top: 1px solid #111; }
@@ -210,7 +210,7 @@ footer { padding: 60px 0; background: #000 !important; color: #fff !important; b
 .project-info > span:first-child { font-size: 10px !important; letter-spacing: 2px !important; color: var(--muted) !important; font-weight: 800 !important; display: block !important; margin-bottom: 10px !important; text-transform: uppercase !important; }
 .project-info h3 { font-size: clamp(22px, 3vw, 32px) !important; line-height: 1.1 !important; letter-spacing: -1px !important; margin: 0 0 12px 0 !important; font-weight: 800 !important; color: var(--text) !important; text-transform: none !important; }
 .project-info p { max-width: 600px !important; color: var(--muted) !important; font-size: 14px !important; line-height: 1.8 !important; margin: 0 !important; font-weight: 500 !important; text-transform: none !important; }
-.project-info h3 span, .project-info p span { font-size: inherit !important; letter-spacing: inherit !important; color: inherit !important; font-weight: inherit !important; text-transform: inherit !important; margin: 0 !important; display: inline !important; }
+.project-info h3 span, .project-info p span { font-size: inherit !important; letter-spacing: inherit !important; color: inherit !important; font-weight: inherit !important; text-transform: inherit !important; margin: 0 !important; }
 
 .project-arrow { font-size: 25px; transition: .4s ease; color: var(--text); }
 .project-row:hover .project-arrow { transform: translate(5px, -5px); color: var(--text); }
