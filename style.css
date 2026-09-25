@@ -345,124 +345,128 @@ body.lang-indonesia .lang-en { display: none !important; }
 body.lang-indonesia .lang-id { display: inline-block !important; }
 
 /* =========================================================
-   9. RESPONSIVE & MOBILE LAYOUT OPTIMIZATION
+   9. RESPONSIVE (AESTHETIC & MINIMAL SCROLL FOR MOBILE)
    ========================================================= */
 
-/* Mencegah layar bergeser ke samping (Horizontal Scroll) */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
+/* Menyembunyikan scroll horizontal liar pada halaman utama */
+html, body { overflow-x: hidden; width: 100%; }
 
 @media (max-width: 991px) {
-    /* Navbar Menu (Hamburger) Fix */
-    .navbar-collapse {
-        background: var(--surface);
-        padding: 20px;
-        border-radius: 16px;
-        margin-top: 15px;
-        border: 1px solid var(--border);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    /* Perbaikan Menu Navigasi Tablet/Mobile */
+    .navbar-collapse { 
+        background: var(--surface); padding: 20px; border-radius: 16px; 
+        margin-top: 15px; border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
     }
-    body.dark-mode .navbar-collapse {
-        background: #141414;
-        border-color: #292929;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-    }
-    .nav-item { margin: 8px 0; }
+    body.dark-mode .navbar-collapse { background: #141414; border-color: #292929; }
     .lang-menu { right: auto; left: 0; }
-
-    /* Hero Section Fix */
-    .hero-metrics { flex-wrap: wrap; gap: 20px; }
-    .hero-visual { margin-top: 60px; }
+    
+    .hero-visual { margin-top: 50px; }
     .visual-overlay { right: 0; bottom: 0; width: 100%; text-align: center; }
     .floating-tag { display: none; }
-
-    /* Grids & Lists */
-    .experience-item { grid-template-columns: 1fr; gap: 15px; padding: 40px 0; }
-    .project-row { grid-template-columns: 50px 220px 1fr 30px; gap: 20px; }
+    
     .project-thumbnail { width: 220px; height: 150px; }
-    
-    .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
-    .system-gallery { grid-template-columns: 1fr; }
-    
-    .footer-main, .footer-links { flex-direction: column; gap: 20px; text-align: center; }
-    .footer-main p { margin: 15px auto 0; }
-    .footer-links { justify-content: center; }
+    .footer-main, .footer-links { text-align: center; justify-content: center; flex-direction: column; }
 }
 
 @media (max-width: 767px) {
-    /* General Spacing & Typography */
-    .section { padding: 60px 0; }
-    .section-header { margin-bottom: 30px; }
-    .section-header h2 { font-size: clamp(2rem, 8vw, 2.5rem); line-height: 1.2; }
-    .project-big-text { font-size: clamp(1.5rem, 6vw, 1.8rem); line-height: 1.4; }
-    p { font-size: 1rem; }
+    /* 1. RUANG & TIPOGRAFI YANG LEBIH PADAT */
+    .section { padding: 55px 0; } 
+    .section-header { margin-bottom: 25px; }
+    .section-header h2 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -1px; }
+    .project-big-text { font-size: 1.4rem; line-height: 1.4; }
+    p { font-size: 0.95rem; line-height: 1.6; }
 
-    /* Hero Section Mobile Layout */
-    .hero { padding: 110px 0 50px; }
-    .hero-title { font-size: clamp(2.8rem, 11vw, 3.5rem); letter-spacing: -1px; word-break: break-word;}
-    .hero-buttons { flex-direction: column; width: 100%; gap: 15px; margin-bottom: 40px; }
-    .btn-main, .btn-outline { width: 100%; justify-content: center; }
-    .hero-metrics { flex-direction: column; gap: 25px; align-items: flex-start; border-top: none; padding-top: 10px; }
-
-    /* About & Expertise Layout */
-    .about-list div { flex-direction: column; align-items: flex-start; gap: 5px; padding: 15px 0; }
-    .expertise-card { padding: 30px 25px; margin-bottom: 15px; }
+    /* 2. HERO SECTION (APP-LIKE FEEL) */
+    .hero { padding: 100px 0 40px; min-height: auto; text-align: left; }
+    .hero-title { font-size: 2.8rem; margin-bottom: 15px; line-height: 1; }
+    .hero-description { font-size: 0.95rem; margin-bottom: 25px; }
     
-    /* Impact Section */
-    .impact { padding: 50px 0; text-align: center; }
-    .impact-item { margin-bottom: 30px; }
-    .impact-item strong { font-size: 3rem; }
+    /* Tombol Side-by-Side (Menghemat ruang vertikal) */
+    .hero-buttons { display: flex; flex-direction: row; gap: 10px; width: 100%; margin-bottom: 30px; }
+    .btn-main, .btn-outline { flex: 1; padding: 12px 10px; font-size: 0.85rem; justify-content: center; white-space: nowrap; }
+    
+    /* Metrik Hero menjadi Grid 3 Kolom sejajar */
+    .hero-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; border-top: none; padding-top: 0; }
+    .hero-metrics div { background: var(--surface); padding: 12px 5px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
+    .hero-metrics strong { font-size: 1.2rem; display: block; margin-bottom: 2px; }
+    .hero-metrics span { font-size: 0.65rem; }
 
-    /* Projects List Layout */
-    .project-row { grid-template-columns: 1fr; gap: 15px; padding: 25px 0; }
-    .project-row:hover { padding: 25px 0; background: transparent; transform: none; }
-    .project-number { order: 1; margin-bottom: -10px; }
-    .project-thumbnail { order: 2; width: 100%; height: auto; aspect-ratio: 16/9; margin-bottom: 10px; }
-    .project-info { order: 3; }
+    /* 3. SWIPEABLE CARDS (PENGURANGAN SCROLL VERTIKAL SIGNIFIKAN) */
+    /* Mengubah layout vertikal menjadi carousel geser horizontal */
+    .expertise-grid, .responsibility-grid, .technology-grid, .process-grid, .flow, .system-gallery, .tft-feature-box {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 15px;
+        margin-left: -15px; /* Memberi efek bleed ke ujung layar HP */
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; 
+    }
+    .expertise-grid::-webkit-scrollbar, .responsibility-grid::-webkit-scrollbar, 
+    .technology-grid::-webkit-scrollbar, .process-grid::-webkit-scrollbar, 
+    .flow::-webkit-scrollbar, .system-gallery::-webkit-scrollbar, .tft-feature-box::-webkit-scrollbar { 
+        display: none; 
+    }
+    
+    /* Lebar card 85% agar card berikutnya terlihat sedikit (petunjuk untuk di-swipe) */
+    .expertise-grid > div, .responsibility-grid > div, .technology-grid > div, 
+    .process-grid > div, .flow > div, .system-screen {
+        flex: 0 0 85% !important;
+        scroll-snap-align: center;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+    }
+    .expertise-grid > div { margin-bottom: 0; padding: 25px 20px; }
+    
+    /* Hilangkan panah pada alur sistem karena sudah digeser horizontal */
+    .flow > i { display: none; }
+
+    /* 4. ABOUT LIST (COMPACT GRID) */
+    .about-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .about-list div { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); flex-direction: column; align-items: flex-start; gap: 5px; }
+    .about-list strong { font-size: 0.9rem; line-height: 1.2; }
+    .about-list span { font-size: 0.7rem; }
+
+    /* 5. IMPACT SECTION (GRID 2x2) */
+    .impact .row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .impact .col-md-3 { width: 100%; }
+    .impact-item { padding: 20px 10px; background: #1a1a1a; border-radius: 16px; border: 1px solid #333; margin-bottom: 0; }
+    .impact-item strong { font-size: 1.8rem; margin-bottom: 5px; }
+
+    /* 6. PROJECTS LIST (SLEEK & TIGHT) */
+    .project-row { grid-template-columns: 1fr; gap: 12px; padding: 20px 0; }
+    .project-thumbnail { width: 100%; height: auto; aspect-ratio: 16/9; margin-bottom: 5px; border-radius: 12px; }
+    .project-info h3 { font-size: 1.3rem !important; }
+    .project-info p { 
+        font-size: 0.9rem !important; 
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; /* Memotong teks jika terlalu panjang */
+    } 
     .project-arrow { display: none; }
 
-    /* TFT Featured Box */
-    .tft-feature-box { grid-template-columns: 1fr; gap: 15px; padding: 0 15px; }
-    .tft-number { font-size: 50px; margin-bottom: -15px; }
-    .tft-feature-box h2 { font-size: 2.2rem; }
+    /* 7. PROJECT DETAILS MEDIA */
+    .project-hero { padding: 100px 0 20px; }
+    .project-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+    .large-image, .video-container { border-radius: 16px; margin: 0; width: 100%; padding: 0 !important; }
+    .large-image img { height: 35vh !important; border-radius: 16px; }
+    .portfolio-video { max-height: 35vh; border-radius: 16px; }
 
-    /* --- PROJECT DETAIL PAGES SPECIFIC --- */
-    .project-hero { padding: 120px 0 40px; }
-    .project-hero h1 { font-size: clamp(2.2rem, 8vw, 2.8rem); }
-    
-    /* Memperbaiki gambar detail proyek yang terlalu tinggi di HP */
-    .large-image { margin: 0; border-radius: 16px; }
-    .large-image img { height: 40vh !important; object-fit: cover; border-radius: 16px;}
-    .video-container { border-radius: 16px; margin: 0; }
-    .portfolio-video { max-height: 40vh; }
-    
-    /* System Flow (Panah menjadi ke bawah) */
-    .flow { flex-direction: column; text-align: center; }
-    .flow > i { transform: rotate(90deg); margin: 15px 0; font-size: 2rem; }
-    .flow > div { width: 100%; }
+    /* Result Cards (Project Detail) dibuat bisa swipe */
+    .project-results .row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; flex-wrap: nowrap; padding-bottom: 10px; scrollbar-width: none; margin-left: -15px; padding-left: 15px; }
+    .project-results .row::-webkit-scrollbar { display: none; }
+    .result-card { flex: 0 0 65%; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 25px 20px; background: #111; margin-right: 15px; text-align: left;}
+    .result-number { font-size: 2.2rem; }
 
-    /* Project Grids menjadi 1 kolom */
-    .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: 1fr; border-radius: 16px; }
-    .responsibility-grid > div, .technology-grid > div, .process-grid > div { padding: 30px 25px; }
-    
-    /* Result Cards */
-    .result-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
-    .result-card:last-child { border-bottom: none; }
-
-    /* Image Cards Grid (Before/After & Portfolio) */
-    .square-card, .landscape-card { margin-bottom: 30px; }
-
-    /* Contact Section */
-    .contact-section { padding: 70px 0; text-align: left; }
-    .contact-info { flex-direction: column; align-items: flex-start; gap: 15px; }
-    .contact-form { margin-top: 30px; }
-    .contact-form button { width: 100%; justify-content: center; }
-
-    /* Footer */
-    footer { padding: 40px 0; text-align: center; }
-    .footer-bottom { flex-direction: column; gap: 15px; align-items: center; }
+    /* 8. KONTAK & FOOTER */
+    .contact-section { padding: 60px 0; text-align: left; }
+    .contact-info { gap: 10px; flex-direction: column; align-items: flex-start; }
+    .contact-form button { width: 100%; padding: 15px; }
+    footer { padding: 30px 0; }
+    .footer-bottom { gap: 10px; flex-direction: column; align-items: center; text-align: center; }
 }
 
 /* =========================================================
