@@ -734,50 +734,78 @@ html, body {
 }
 
 /* =========================================================
-   11. PERBAIKAN EXPERIENCE SECTION (MOBILE UI)
+   11. TIMELINE UI EXPERIENCE SECTION (MOBILE)
    ========================================================= */
 
 @media (max-width: 767px) {
-    /* Mengubah Grid menjadi Flexbox susun bawah yang padat */
+    /* Menghilangkan border atas bawaan container */
+    .experience-list {
+        border-top: none !important;
+    }
+
+    /* Mengubah setiap item menjadi struktur Timeline */
     .experience-item {
         display: flex !important;
         flex-direction: column !important;
-        gap: 8px !important;
-        padding: 35px 0 !important;
+        padding: 0 0 35px 20px !important; /* Ruang di kiri untuk garis */
+        margin-bottom: 0 !important;
+        border-bottom: none !important;
+        border-left: 2px solid var(--border) !important; /* Garis vertikal timeline */
+        position: relative !important;
+        gap: 2px !important;
     }
-    
-    /* Membuat Tahun menjadi label/badge yang elegan */
+
+    /* Membuat Titik Bulat (Node) pada timeline */
+    .experience-item::before {
+        content: '';
+        position: absolute;
+        left: -6px; /* Posisi pas di tengah garis */
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        background: var(--text); /* Warna titik bulat */
+        border-radius: 50%;
+    }
+
+    /* Memutus garis vertikal pada item paling bawah agar terlihat selesai/rapi */
+    .experience-item:last-child {
+        border-left-color: transparent !important;
+    }
+
+    /* Teks Tahun (Year) - Lebih menyatu dengan timeline */
     .experience-year {
-        font-size: 0.75rem !important;
+        font-size: 0.8rem !important;
         font-weight: 800 !important;
-        background: var(--text) !important;
-        color: var(--bg) !important;
-        padding: 6px 14px !important;
-        border-radius: 50px !important;
-        align-self: flex-start !important;
-        margin-bottom: 10px !important;
-        letter-spacing: 0.5px !important;
+        color: var(--text) !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 6px !important;
     }
-    
-    /* Merapikan label kategori (Contoh: DIGITAL MARKETING) */
+
+    /* Teks Jabatan (Kicker: Misal "DIGITAL MARKETING") */
     .experience-item > div > span:first-child {
         font-size: 0.7rem !important;
-        margin-bottom: 5px !important;
+        color: var(--muted) !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 2px !important;
         display: block !important;
+        font-weight: 800 !important;
     }
-    
-    /* Memperkecil judul agar tidak memecah layout */
+
+    /* Nama Perusahaan / Judul */
     .experience-item h3 {
-        font-size: 1.4rem !important;
+        font-size: 1.3rem !important;
+        font-weight: 800 !important;
         line-height: 1.2 !important;
-        margin-bottom: 10px !important;
         letter-spacing: -0.5px !important;
+        margin: 0 0 10px 0 !important;
+        color: var(--text) !important;
     }
-    
-    /* Menyesuaikan ukuran dan jarak spasi deskripsi */
+
+    /* Deskripsi Pekerjaan (Spasi dan ukuran font optimal untuk bacaan) */
     .experience-item p {
         font-size: 0.9rem !important;
         line-height: 1.6 !important;
+        color: var(--muted) !important;
         margin: 0 !important;
     }
 }
