@@ -429,3 +429,96 @@ body.lang-indonesia .lang-id { display: inline-block !important; }
     .footer-links { justify-content: center; flex-wrap: wrap; }
     .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
 }
+
+/* =========================================================
+   PERBAIKAN MOBILE FRIENDLY (MENCEGAH BOCOR/OVERFLOW)
+   ========================================================= */
+
+/* 1. Mencegah layar bergeser ke kiri/kanan (Horizontal Scroll) */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    /* 2. Memperbaiki elemen yang melampaui batas layar */
+    .visual-overlay {
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tag-two {
+        right: 0 !important;
+    }
+
+    /* 3. Memberikan background pada Menu Navigasi (Hamburger) saat dibuka */
+    .navbar-collapse {
+        background: var(--surface);
+        padding: 20px;
+        border-radius: 16px;
+        margin-top: 15px;
+        border: 1px solid var(--border);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    body.dark-mode .navbar-collapse {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    /* Mencegah dropdown bahasa terpotong */
+    .lang-menu {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 4. Menyesuaikan teks raksasa agar tidak memecah layout HP */
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 3.2rem) !important;
+        word-break: break-word;
+    }
+    
+    .section-header h2, .project-big-text {
+        font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+    }
+
+    /* 5. Merapikan tombol Hero agar 100% dan sejajar */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .hero-buttons .btn-main, 
+    .hero-buttons .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 6. Memastikan grid gambar dan video tidak keluar layar */
+    .large-image, .video-container, .system-screen, .website-shot {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        border-radius: 16px !important;
+    }
+
+    /* 7. Menyesuaikan ukuran box fitur TFT */
+    .tft-feature-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    /* 8. Merapikan Form Kontak */
+    .contact-form button {
+        width: 100%;
+        justify-content: center;
+    }
+}
