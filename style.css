@@ -806,3 +806,39 @@ html, body {
         width: 100% !important;
     }
 }
+
+/* =========================================================
+   12. FINAL TWEAKS (BUTTON CENTER, FOOTER, & DARK MODE FIX)
+   ========================================================= */
+
+/* 1. Memperbaiki teks ngetik (Typewriter) yang gelap di Dark Mode */
+body.dark-mode .hero-role .text-muted,
+body.dark-mode .typewrite,
+body.dark-mode .typewrite > .wrap {
+    color: #e0e0e0 !important; /* Diubah menjadi abu-abu terang agar sangat jelas di latar hitam */
+}
+
+@media (max-width: 767px) {
+    /* 2. Memastikan teks "Let's Connect" rata tengah (Center) */
+    .hero-buttons .btn-outline {
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 3. Memastikan teks deskripsi footer rata tengah sempurna */
+    .footer-main > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Memaksa semua elemen di dalamnya ke tengah */
+        width: 100% !important;
+    }
+    
+    .footer-main p {
+        text-align: center !important;
+        margin: 10px auto 0 auto !important; /* Menghapus margin aneh yang menggeser teks */
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
