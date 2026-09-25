@@ -561,3 +561,174 @@ html, body {
         justify-content: center;
     }
 }
+
+/* =========================================================
+   10. PROJECT PAGES MOBILE UI (AESTHETIC & USER FRIENDLY)
+   ========================================================= */
+
+@media (max-width: 767px) {
+    /* 1. Mencegah Horizontal Scroll & Merapikan Spasi Dasar */
+    .project-page { overflow-x: hidden; width: 100%; }
+    .project-section { padding: 50px 0 !important; }
+    .project-hero { padding: 110px 15px 30px !important; text-align: left; }
+    
+    /* 2. Tipografi Lebih Elegan (Tidak Raksasa) */
+    .project-hero h1 { font-size: 2.2rem !important; line-height: 1.1 !important; margin-bottom: 15px !important; }
+    .project-hero p { font-size: 0.95rem !important; line-height: 1.6 !important; }
+    .project-big-text { font-size: 1.3rem !important; line-height: 1.4 !important; margin-bottom: 20px !important; }
+    .project-text { font-size: 0.95rem !important; line-height: 1.6 !important; }
+    .project-section-title h2 { font-size: 1.8rem !important; line-height: 1.2 !important; letter-spacing: -1px !important; }
+    .section-kicker { margin-bottom: 10px !important; font-size: 0.75rem !important; }
+
+    /* 3. Hero Image & Video Container (Presisi di Layar) */
+    .project-media .large-image {
+        margin: 0 15px !important;
+        padding: 0 !important;
+        height: auto !important;
+        aspect-ratio: 16/9 !important;
+        border-radius: 16px !important;
+    }
+    .project-media .large-image img {
+        width: 100% !important; height: 100% !important;
+        object-fit: cover !important;
+        transform: scale(1) !important; /* Menghapus zoom liar */
+        border-radius: 16px !important;
+    }
+    .video-container {
+        margin: 0 15px !important;
+        width: calc(100% - 30px) !important;
+        border-radius: 16px !important;
+    }
+    .portfolio-video {
+        max-height: 30vh !important;
+        border-radius: 16px !important;
+        object-fit: cover !important;
+    }
+
+    /* 4. RESULT CARDS (Diubah menjadi Grid 2x2 yang Padat) */
+    .project-results .row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        margin: 0 !important;
+    }
+    .project-results .col-md-3 { width: 100% !important; padding: 0 !important; }
+    .result-card {
+        padding: 20px 15px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        border-radius: 16px !important;
+        text-align: left !important;
+        height: 100%;
+    }
+    .result-number { font-size: 1.8rem !important; margin-bottom: 5px !important; display: block; }
+    .result-label { font-size: 0.7rem !important; }
+
+    /* 5. APP-LIKE LIST VIEW UNTUK KONTEN (MINIM SCROLL) 
+       Mengubah box vertikal raksasa menjadi list horizontal ala UI iPhone/Android */
+    .square-card, .landscape-card, .system-screen, .website-shot {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        background: var(--surface) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 16px !important;
+        padding: 12px !important;
+        gap: 15px !important;
+        margin-bottom: 12px !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03) !important;
+        height: auto !important;
+    }
+    
+    /* Thumbnail Gambar di Samping Kiri */
+    .square-img, .landscape-img, .img-wrapper, 
+    .system-screen > div:first-child {
+        flex: 0 0 110px !important;
+        height: 110px !important;
+        padding: 0 !important;
+        border-bottom: none !important;
+        border-radius: 12px !important;
+        background: #f5f5f5 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+    
+    .square-img img, .landscape-img img, .img-wrapper img, 
+    .system-screen > div:first-child img {
+        width: 100% !important; height: 100% !important;
+        object-fit: cover !important;
+        transform: none !important;
+    }
+
+    /* Area Teks di Samping Kanan */
+    .square-info, .landscape-info, .shot-info, 
+    .system-screen > div:last-child {
+        flex: 1 !important;
+        padding: 0 !important; margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    /* Tipografi di dalam List */
+    .screen-title, .landscape-info h3, .square-info h4 {
+        font-size: 1.05rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 4px !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.3px !important;
+    }
+    .shot-info { font-size: 1rem !important; font-weight: 800 !important; }
+
+    .screen-desc, .landscape-info p, .square-info p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+        color: var(--muted) !important;
+        margin: 0 !important;
+        /* Truncate: Memotong teks menjadi maksimal 2 baris agar rapi */
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+    
+    /* Menyembunyikan elemen dekoratif yang kurang penting di layar kecil */
+    .screen-number, .shot-number, .landscape-info > span:first-child {
+        font-size: 0.65rem !important; margin-bottom: 4px !important;
+    }
+
+    /* 6. GRID FITUR / TEKNOLOGI (2 Kolom Padat) */
+    .responsibility-grid, .technology-grid, .process-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    .responsibility-grid > div, .technology-grid > div, .process-grid > div {
+        background: var(--surface) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 16px !important;
+        padding: 15px 12px !important;
+        text-align: left !important;
+    }
+    .grid-number { font-size: 0.7rem !important; margin-bottom: 8px !important; }
+    .grid-title { font-size: 1rem !important; margin-bottom: 5px !important; line-height: 1.2 !important; }
+    .grid-desc { font-size: 0.8rem !important; line-height: 1.3 !important; }
+    .technology-grid i { font-size: 1.8rem !important; margin-bottom: 10px !important; display: block !important; }
+
+    /* 7. SYSTEM FLOW (List Vertikal Kompak) */
+    .flow { display: flex !important; flex-direction: column !important; gap: 8px !important; align-items: center !important; }
+    .flow > div {
+        width: 100% !important; padding: 12px 15px !important;
+        display: flex !important; justify-content: space-between !important; align-items: center !important;
+        background: #111 !important; border-radius: 12px !important; text-align: left !important;
+    }
+    .flow-number { margin: 0 !important; }
+    .flow strong { margin: 0 !important; font-size: 1.1rem !important; }
+    .flow > i { transform: rotate(90deg) !important; margin: 0 !important; font-size: 1.2rem !important; opacity: 0.5 !important; }
+    
+    /* Perbaikan Jarak Container Bawaan Bootstrap */
+    .project-section .row { margin-left: 0 !important; margin-right: 0 !important; }
+    .project-section .col-md-6, .project-section .col-md-4, .project-section .col-lg-8, .project-section .col-12 { padding: 0 !important; }
+    .project-section h3 { margin-top: 15px !important; }
+}
