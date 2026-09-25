@@ -734,6 +734,55 @@ html, body {
 }
 
 /* =========================================================
+   11. PERBAIKAN EXPERIENCE SECTION (MOBILE UI)
+   ========================================================= */
+
+@media (max-width: 767px) {
+    /* Mengubah Grid menjadi Flexbox susun bawah yang padat */
+    .experience-item {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 35px 0 !important;
+    }
+    
+    /* Membuat Tahun menjadi label/badge yang elegan */
+    .experience-year {
+        font-size: 0.75rem !important;
+        font-weight: 800 !important;
+        background: var(--text) !important;
+        color: var(--bg) !important;
+        padding: 6px 14px !important;
+        border-radius: 50px !important;
+        align-self: flex-start !important;
+        margin-bottom: 10px !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    /* Merapikan label kategori (Contoh: DIGITAL MARKETING) */
+    .experience-item > div > span:first-child {
+        font-size: 0.7rem !important;
+        margin-bottom: 5px !important;
+        display: block !important;
+    }
+    
+    /* Memperkecil judul agar tidak memecah layout */
+    .experience-item h3 {
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+        letter-spacing: -0.5px !important;
+    }
+    
+    /* Menyesuaikan ukuran dan jarak spasi deskripsi */
+    .experience-item p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+    }
+}
+
+/* =========================================================
    11. TIMELINE UI EXPERIENCE SECTION (MOBILE)
    ========================================================= */
 
