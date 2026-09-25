@@ -345,89 +345,124 @@ body.lang-indonesia .lang-en { display: none !important; }
 body.lang-indonesia .lang-id { display: inline-block !important; }
 
 /* =========================================================
-   9. RESPONSIVE (MOBILE OPTIMIZATION)
+   9. RESPONSIVE & MOBILE LAYOUT OPTIMIZATION
    ========================================================= */
 
+/* Mencegah layar bergeser ke samping (Horizontal Scroll) */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 @media (max-width: 991px) {
+    /* Navbar Menu (Hamburger) Fix */
+    .navbar-collapse {
+        background: var(--surface);
+        padding: 20px;
+        border-radius: 16px;
+        margin-top: 15px;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    body.dark-mode .navbar-collapse {
+        background: #141414;
+        border-color: #292929;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+    .nav-item { margin: 8px 0; }
+    .lang-menu { right: auto; left: 0; }
+
+    /* Hero Section Fix */
     .hero-metrics { flex-wrap: wrap; gap: 20px; }
     .hero-visual { margin-top: 60px; }
+    .visual-overlay { right: 0; bottom: 0; width: 100%; text-align: center; }
     .floating-tag { display: none; }
-    .experience-item { grid-template-columns: 1fr; gap: 10px; padding: 35px 0; }
+
+    /* Grids & Lists */
+    .experience-item { grid-template-columns: 1fr; gap: 15px; padding: 40px 0; }
     .project-row { grid-template-columns: 50px 220px 1fr 30px; gap: 20px; }
     .project-thumbnail { width: 220px; height: 150px; }
-    .expertise-card { margin-bottom: 10px; border: 1px solid #222;}
-    .footer-main, .footer-links { flex-direction: column; gap: 20px; }
     
     .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
     .system-gallery { grid-template-columns: 1fr; }
-    .hero-image-adjust { height: 50vh; }
-    .lang-menu { right: auto; left: 0; }
+    
+    .footer-main, .footer-links { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-main p { margin: 15px auto 0; }
+    .footer-links { justify-content: center; }
 }
 
 @media (max-width: 767px) {
     /* General Spacing & Typography */
-    .section { padding: 70px 0; }
-    .section-header h2 { font-size: 2.2rem; line-height: 1.2; }
-    p { font-size: 0.95rem; }
+    .section { padding: 60px 0; }
+    .section-header { margin-bottom: 30px; }
+    .section-header h2 { font-size: clamp(2rem, 8vw, 2.5rem); line-height: 1.2; }
+    .project-big-text { font-size: clamp(1.5rem, 6vw, 1.8rem); line-height: 1.4; }
+    p { font-size: 1rem; }
 
-    /* Hero Section (Centered & Clean) */
-    .hero { padding: 120px 0 60px; text-align: center; }
-    .status-badge { margin: 0 auto 20px auto; display: inline-flex; }
-    .hero-title { font-size: 2.8rem; letter-spacing: -1px; }
-    .hero-description { margin-left: auto; margin-right: auto; font-size: 1rem; }
-    
-    /* Hero Buttons (Full Width on Mobile) */
-    .hero-buttons { flex-direction: column; gap: 12px; width: 100%; margin-bottom: 40px; }
+    /* Hero Section Mobile Layout */
+    .hero { padding: 110px 0 50px; }
+    .hero-title { font-size: clamp(2.8rem, 11vw, 3.5rem); letter-spacing: -1px; word-break: break-word;}
+    .hero-buttons { flex-direction: column; width: 100%; gap: 15px; margin-bottom: 40px; }
     .btn-main, .btn-outline { width: 100%; justify-content: center; }
-    
-    /* Hero Metrics & Visual */
-    .hero-metrics { flex-direction: column; gap: 20px; border-top: none; padding-top: 0; align-items: center; }
-    .hero-visual { margin-top: 30px; }
+    .hero-metrics { flex-direction: column; gap: 25px; align-items: flex-start; border-top: none; padding-top: 10px; }
 
-    /* Project List (Fixing Hover Glitch on Mobile) */
+    /* About & Expertise Layout */
+    .about-list div { flex-direction: column; align-items: flex-start; gap: 5px; padding: 15px 0; }
+    .expertise-card { padding: 30px 25px; margin-bottom: 15px; }
+    
+    /* Impact Section */
+    .impact { padding: 50px 0; text-align: center; }
+    .impact-item { margin-bottom: 30px; }
+    .impact-item strong { font-size: 3rem; }
+
+    /* Projects List Layout */
     .project-row { grid-template-columns: 1fr; gap: 15px; padding: 25px 0; }
-    .project-row:hover { padding-left: 0; padding-right: 0; background: transparent; }
+    .project-row:hover { padding: 25px 0; background: transparent; transform: none; }
     .project-number { order: 1; margin-bottom: -10px; }
-    .project-thumbnail { order: 2; width: 100%; height: auto; aspect-ratio: 16/9; }
+    .project-thumbnail { order: 2; width: 100%; height: auto; aspect-ratio: 16/9; margin-bottom: 10px; }
     .project-info { order: 3; }
-    .project-info h3 { font-size: 1.5rem !important; }
     .project-arrow { display: none; }
 
-    /* TFT Feature */
-    .tft-feature-box { grid-template-columns: 1fr; gap: 15px; text-align: center; }
-    .tft-number { font-size: 40px; }
-    .feature-link { justify-content: center; }
+    /* TFT Featured Box */
+    .tft-feature-box { grid-template-columns: 1fr; gap: 15px; padding: 0 15px; }
+    .tft-number { font-size: 50px; margin-bottom: -15px; }
+    .tft-feature-box h2 { font-size: 2.2rem; }
 
-    /* Experience Section */
-    .experience-item { grid-template-columns: 1fr; gap: 5px; padding: 25px 0; }
-    .experience-year { font-size: 1rem; color: var(--text); margin-bottom: 5px; }
-
-    /* Project Details Pages */
-    .project-hero { padding: 130px 0 40px; }
-    .project-hero h1 { font-size: 2.2rem; }
-    .project-section { padding: 60px 0; }
-    .project-big-text { font-size: 1.5rem; }
-    .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: 1fr; }
-    .flow { flex-direction: column; text-align: center; }
-    .flow > i { transform: rotate(90deg); margin: 15px 0; }
-    .result-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
+    /* --- PROJECT DETAIL PAGES SPECIFIC --- */
+    .project-hero { padding: 120px 0 40px; }
+    .project-hero h1 { font-size: clamp(2.2rem, 8vw, 2.8rem); }
     
-    /* Media Adjustments */
-    .hero-image-adjust { height: auto; aspect-ratio: 16/9; object-fit: cover; }
-    .video-container { border-radius: 16px; }
+    /* Memperbaiki gambar detail proyek yang terlalu tinggi di HP */
+    .large-image { margin: 0; border-radius: 16px; }
+    .large-image img { height: 40vh !important; object-fit: cover; border-radius: 16px;}
+    .video-container { border-radius: 16px; margin: 0; }
     .portfolio-video { max-height: 40vh; }
+    
+    /* System Flow (Panah menjadi ke bawah) */
+    .flow { flex-direction: column; text-align: center; }
+    .flow > i { transform: rotate(90deg); margin: 15px 0; font-size: 2rem; }
+    .flow > div { width: 100%; }
+
+    /* Project Grids menjadi 1 kolom */
+    .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: 1fr; border-radius: 16px; }
+    .responsibility-grid > div, .technology-grid > div, .process-grid > div { padding: 30px 25px; }
+    
+    /* Result Cards */
+    .result-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
+    .result-card:last-child { border-bottom: none; }
+
+    /* Image Cards Grid (Before/After & Portfolio) */
+    .square-card, .landscape-card { margin-bottom: 30px; }
 
     /* Contact Section */
-    .contact-section { text-align: center; padding: 80px 0; }
-    .contact-section p { margin-left: auto; margin-right: auto; }
-    .contact-info { flex-direction: column; align-items: center; gap: 10px; }
+    .contact-section { padding: 70px 0; text-align: left; }
+    .contact-info { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .contact-form { margin-top: 30px; }
     .contact-form button { width: 100%; justify-content: center; }
 
     /* Footer */
-    .footer-main { text-align: center; justify-content: center; }
-    .footer-main p { margin-left: auto; margin-right: auto; }
-    .footer-links { justify-content: center; flex-wrap: wrap; }
-    .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+    footer { padding: 40px 0; text-align: center; }
+    .footer-bottom { flex-direction: column; gap: 15px; align-items: center; }
 }
 
 /* =========================================================
