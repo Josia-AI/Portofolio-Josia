@@ -808,37 +808,38 @@ html, body {
 }
 
 /* =========================================================
-   12. FINAL TWEAKS (BUTTON CENTER, FOOTER, & DARK MODE FIX)
+   12. PERBAIKAN MUTLAK: TOMBOL, FOOTER, & DARK MODE
    ========================================================= */
 
-/* 1. Memperbaiki teks ngetik (Typewriter) yang gelap di Dark Mode */
-body.dark-mode .hero-role .text-muted,
-body.dark-mode .typewrite,
-body.dark-mode .typewrite > .wrap {
-    color: #e0e0e0 !important; /* Diubah menjadi abu-abu terang agar sangat jelas di latar hitam */
+/* 1. Memperbaiki teks ngetik (I do...) di Dark Mode agar terbaca terang */
+body.dark-mode .hero-role span.text-muted.typewrite {
+    color: #e0e0e0 !important;
 }
 
 @media (max-width: 767px) {
-    /* 2. Memastikan teks "Let's Connect" rata tengah (Center) */
+    /* 2. Memaksa tombol "Let's Connect" Rata Tengah */
     .hero-buttons .btn-outline {
-        display: inline-flex !important;
+        display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         text-align: center !important;
+        width: 100% !important;
     }
 
-    /* 3. Memastikan teks deskripsi footer rata tengah sempurna */
-    .footer-main > div {
+    /* 3. Memaksa Logo J. dan Teks Profesi di Footer Rata Tengah */
+    .footer-main > div:first-child {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* Memaksa semua elemen di dalamnya ke tengah */
+        align-items: center !important;
+        justify-content: center !important;
         width: 100% !important;
+        text-align: center !important;
     }
     
     .footer-main p {
         text-align: center !important;
-        margin: 10px auto 0 auto !important; /* Menghapus margin aneh yang menggeser teks */
-        max-width: 100% !important;
+        margin: 15px auto 0 auto !important;
         width: 100% !important;
+        max-width: 100% !important;
     }
 }
