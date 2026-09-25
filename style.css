@@ -345,8 +345,9 @@ body.lang-indonesia .lang-en { display: none !important; }
 body.lang-indonesia .lang-id { display: inline-block !important; }
 
 /* =========================================================
-   9. RESPONSIVE
+   9. RESPONSIVE (MOBILE OPTIMIZATION)
    ========================================================= */
+
 @media (max-width: 991px) {
     .hero-metrics { flex-wrap: wrap; gap: 20px; }
     .hero-visual { margin-top: 60px; }
@@ -364,25 +365,67 @@ body.lang-indonesia .lang-id { display: inline-block !important; }
 }
 
 @media (max-width: 767px) {
-    .section { padding: 80px 0; }
-    .hero { padding: 130px 0 60px; }
-    .hero-title { font-size: 3rem; }
+    /* General Spacing & Typography */
+    .section { padding: 70px 0; }
+    .section-header h2 { font-size: 2.2rem; line-height: 1.2; }
+    p { font-size: 0.95rem; }
+
+    /* Hero Section (Centered & Clean) */
+    .hero { padding: 120px 0 60px; text-align: center; }
+    .status-badge { margin: 0 auto 20px auto; display: inline-flex; }
+    .hero-title { font-size: 2.8rem; letter-spacing: -1px; }
+    .hero-description { margin-left: auto; margin-right: auto; font-size: 1rem; }
+    
+    /* Hero Buttons (Full Width on Mobile) */
+    .hero-buttons { flex-direction: column; gap: 12px; width: 100%; margin-bottom: 40px; }
+    .btn-main, .btn-outline { width: 100%; justify-content: center; }
+    
+    /* Hero Metrics & Visual */
+    .hero-metrics { flex-direction: column; gap: 20px; border-top: none; padding-top: 0; align-items: center; }
+    .hero-visual { margin-top: 30px; }
+
+    /* Project List (Fixing Hover Glitch on Mobile) */
     .project-row { grid-template-columns: 1fr; gap: 15px; padding: 25px 0; }
-    .project-number { order: 1; }
-    .project-thumbnail { order: 2; width: 100%; height: 230px; }
+    .project-row:hover { padding-left: 0; padding-right: 0; background: transparent; }
+    .project-number { order: 1; margin-bottom: -10px; }
+    .project-thumbnail { order: 2; width: 100%; height: auto; aspect-ratio: 16/9; }
     .project-info { order: 3; }
+    .project-info h3 { font-size: 1.5rem !important; }
     .project-arrow { display: none; }
-    .tft-feature-box { grid-template-columns: 1fr; gap: 20px; }
-    .tft-number { font-size: 50px; }
-    
-    .project-hero { padding: 150px 0 50px; }
-    .project-section { padding: 80px 0; }
+
+    /* TFT Feature */
+    .tft-feature-box { grid-template-columns: 1fr; gap: 15px; text-align: center; }
+    .tft-number { font-size: 40px; }
+    .feature-link { justify-content: center; }
+
+    /* Experience Section */
+    .experience-item { grid-template-columns: 1fr; gap: 5px; padding: 25px 0; }
+    .experience-year { font-size: 1rem; color: var(--text); margin-bottom: 5px; }
+
+    /* Project Details Pages */
+    .project-hero { padding: 130px 0 40px; }
+    .project-hero h1 { font-size: 2.2rem; }
+    .project-section { padding: 60px 0; }
+    .project-big-text { font-size: 1.5rem; }
     .responsibility-grid, .technology-grid, .process-grid { grid-template-columns: 1fr; }
-    .flow { flex-direction: column; }
-    .flow > i { transform: rotate(90deg); margin: 10px 0; }
-    .result-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .flow { flex-direction: column; text-align: center; }
+    .flow > i { transform: rotate(90deg); margin: 15px 0; }
+    .result-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
     
-    .hero-image-adjust { height: 40vh; }
+    /* Media Adjustments */
+    .hero-image-adjust { height: auto; aspect-ratio: 16/9; object-fit: cover; }
     .video-container { border-radius: 16px; }
-    .portfolio-video { max-height: 50vh; }
+    .portfolio-video { max-height: 40vh; }
+
+    /* Contact Section */
+    .contact-section { text-align: center; padding: 80px 0; }
+    .contact-section p { margin-left: auto; margin-right: auto; }
+    .contact-info { flex-direction: column; align-items: center; gap: 10px; }
+    .contact-form button { width: 100%; justify-content: center; }
+
+    /* Footer */
+    .footer-main { text-align: center; justify-content: center; }
+    .footer-main p { margin-left: auto; margin-right: auto; }
+    .footer-links { justify-content: center; flex-wrap: wrap; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
 }
