@@ -17,6 +17,387 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style id="portfolio-responsive-css">
+
+    /* ==========================================================
+       PORTFOLIO LAYOUT REFINEMENT / RESPONSIVE CSS
+       Inline in index.html, overrides style.css without altering
+       the global stylesheet used by individual project pages.
+       ========================================================== */
+
+    :root { --hover-bg: #ededeb; --page-gutter: clamp(20px, 3vw, 40px); }
+    body.dark-mode { --hover-bg: #202020; }
+    html { scroll-padding-top: 92px; }
+    body { overflow-x: clip; -webkit-font-smoothing: antialiased; }
+    img, video { max-width: 100%; }
+    .container { padding-left: var(--page-gutter); padding-right: var(--page-gutter); }
+    section, footer { position: relative; }
+    section[id] { scroll-margin-top: 82px; }
+    button, input, textarea { font: inherit; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    :is(a, button, input, textarea):focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+    }
+    .lang-option:focus-visible { outline-offset: -2px; }
+
+    /* Navigation: consistent proportions and readable contrast. */
+    #navbar {
+        padding: 15px 0;
+        z-index: 1050;
+        background: color-mix(in srgb, var(--bg) 90%, transparent);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+    }
+    #navbar.scrolled { padding: 10px 0; }
+    #navbar .container { max-width: 1240px; }
+    #navbar .navbar-brand { line-height: 1; letter-spacing: -.05em; font-size: 1.8rem; }
+    #navbar .nav-link {
+        padding: 10px 7px;
+        margin: 0 5px;
+        font-size: .84rem;
+        white-space: nowrap;
+        transition: opacity .2s ease;
+    }
+    #navbar .nav-link:hover { opacity: .58; }
+    #navbar .nav-link.active { text-decoration: underline; text-underline-offset: 8px; }
+    .lang-btn { min-height: 42px; white-space: nowrap; }
+    .theme-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 42px; height: 42px; border: 1px solid var(--border);
+        border-radius: 50%;
+    }
+    .theme-toggle:hover { background: var(--hover-bg); }
+
+    /* Hero: the original min-vh-100 row plus hero padding caused an
+       unnecessarily tall first screen. Let the section own the height. */
+    .hero {
+        min-height: min(100svh, 900px);
+        padding: 120px 0 72px;
+        overflow: clip;
+    }
+    .hero .row.min-vh-100 { min-height: 0 !important; }
+    .hero .container { max-width: 1240px; }
+    .hero .row > [class*="col-"] { min-width: 0; }
+    .hero-label { letter-spacing: .14em; }
+    .hero-title {
+        font-size: clamp(3.35rem, 5.6vw, 5.75rem);
+        letter-spacing: -.062em;
+        line-height: 1.02;
+        text-wrap: balance;
+        overflow-wrap: anywhere;
+    }
+    .hero-role { margin-bottom: 20px; min-height: 32px; }
+    .hero-description { max-width: 570px; line-height: 1.8; margin-bottom: 26px; }
+    .hero-buttons { flex-wrap: wrap; gap: 12px; margin-bottom: 38px; }
+    .hero-buttons a { min-height: 48px; justify-content: center; }
+    .hero-metrics {
+        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 16px; row-gap: 12px;
+        padding-top: 22px;
+        max-width: 600px;
+    }
+    .hero-metrics > div { min-width: 0; }
+    .hero-metrics strong { font-size: clamp(1.45rem, 2vw, 2rem); }
+    .hero-metrics span { display: block; font-size: .69rem; line-height: 1.5; }
+    .hero-visual { max-width: 420px; width: 100%; margin-inline: auto; }
+    .hero-photo { border-radius: 18px; }
+    .hero-photo img { object-position: center top; }
+    .visual-overlay { right: 12px; bottom: -12px; border-radius: 12px; }
+    .floating-tag { z-index: 2; }
+    .tag-one { left: -16px; }
+    .tag-two { right: -10px; }
+    .tag-three { left: -12px; }
+
+    /* Section rhythm and grid balance. */
+    .section { padding: 96px 0; }
+    .section-header { margin-bottom: 42px; }
+    /* Original generic `.section-header span` also targeted the translated
+       h2 text, shrinking every section heading to 12px. Restore inheritance. */
+    .section-header h2, .skills-title h2 { text-wrap: balance; }
+    .section-header h2 > .lang-en,
+    .section-header h2 > .lang-id {
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit;
+        letter-spacing: inherit !important;
+        color: inherit !important;
+    }
+    .dark-section .section-header h2 > .lang-en,
+    .dark-section .section-header h2 > .lang-id { color: #fff !important; }
+    .section-header h2 { font-size: clamp(2.4rem, 4.5vw, 4rem); }
+    .about-intro { max-width: 650px; }
+    .about-description { line-height: 1.85; }
+    .about-list { border-top: 1px solid var(--border); }
+    .about-list div { gap: 20px; padding: 18px 0; }
+    .about-list span { flex: 0 0 26px; }
+    .about-list strong { line-height: 1.35; }
+    .expertise-grid { row-gap: 0; }
+    .expertise-card { padding: clamp(26px, 2.6vw, 38px); }
+    .expertise-card h3 { font-size: clamp(1.2rem, 1.6vw, 1.5rem); }
+    .expertise-card p { color: #aaa !important; line-height: 1.75; }
+    .tft-feature { padding: 80px 0; }
+    .tft-feature-box { grid-template-columns: 72px minmax(0, 1fr); gap: 30px; }
+    .tft-feature-box h2 { font-size: clamp(2.1rem, 4vw, 3.5rem); line-height: 1.08; }
+    .tft-feature-box p { max-width: 670px; }
+
+    /* Project list: consistent image ratio, readable detail, safe width. */
+    .project-row {
+        grid-template-columns: 32px minmax(200px, 260px) minmax(0, 1fr) 26px;
+        gap: clamp(16px, 2vw, 28px);
+        padding: 28px 10px;
+    }
+    .project-row:hover { padding-left: 18px; padding-right: 18px; }
+    .project-thumbnail { width: 100%; height: auto; aspect-ratio: 16 / 10; }
+    .project-info { min-width: 0; }
+    .project-info h3 { font-size: clamp(1.4rem, 2.35vw, 2rem) !important; line-height: 1.17 !important; }
+    .project-info p { line-height: 1.65 !important; }
+    .project-arrow { justify-self: end; }
+
+    /* Impact, experience, skills, contact, footer. */
+    .impact { padding: 62px 0; }
+    .impact .row { row-gap: 28px; }
+    .impact-item strong { font-size: clamp(2.6rem, 4.5vw, 4.1rem); }
+    .impact-item span { line-height: 1.5; display: block; }
+    .experience-item { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; padding: 34px 0; }
+    .experience-item h3 { margin-bottom: 12px; line-height: 1.25; font-size: clamp(1.35rem, 2vw, 1.75rem); }
+    .experience-item p { margin-bottom: 0; }
+    .skills-section { padding: 88px 0; }
+    .skills-title h2 { font-weight: 800; letter-spacing: -.035em; }
+    .skills-grid { gap: 10px; margin-top: 28px; }
+    .skills-grid span { padding: 10px 18px; }
+    .contact-section { padding: 100px 0; }
+    .contact-section h2 { font-size: clamp(2.8rem, 5vw, 5rem); line-height: 1.03; }
+    .contact-section p { margin-bottom: 32px; }
+    .contact-info a { overflow-wrap: anywhere; }
+    .contact-form { width: 100%; }
+    .contact-form input, .contact-form textarea { border-radius: 0; }
+    footer { padding: 52px 0 30px; }
+    .footer-main { margin-bottom: 35px; }
+    .footer-links { align-items: flex-start; flex-wrap: wrap; }
+    .footer-bottom { gap: 8px 20px; }
+
+    /* Laptops / medium desktops. */
+    @media (max-width: 1199.98px) {
+        .hero-title { font-size: clamp(3.05rem, 5.5vw, 4.5rem); }
+        .hero-visual { max-width: 370px; }
+        .floating-tag { font-size: .67rem; padding: 9px 11px; }
+        .project-row { grid-template-columns: 25px minmax(180px, 220px) minmax(0, 1fr) 20px; gap: 20px; }
+    }
+
+    /* Tablet and mobile navigation. */
+    @media (max-width: 991.98px) {
+        :root { --page-gutter: 24px; }
+        #navbar, #navbar.scrolled {
+            padding: 11px 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+        }
+        #navbar .navbar-toggler { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+        #navbar .navbar-toggler i { font-size: 1.85rem !important; }
+        #navbar .navbar-toggler .mobile-menu-icon {
+            display: block; width: 23px; height: 17px;
+            border-top: 2px solid var(--text);
+            border-bottom: 2px solid var(--text);
+            position: relative;
+        }
+        #navbar .navbar-toggler .mobile-menu-icon::after {
+            content: ""; width: 100%; border-top: 2px solid var(--text);
+            position: absolute; left: 0; top: 6px;
+        }
+        #mainNav {
+            margin-top: 12px;
+            padding: 10px 14px 14px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 16px 40px rgba(0,0,0,.08);
+        }
+        #mainNav.show { max-height: calc(100svh - 96px); overflow-y: auto; }
+        #mainNav .navbar-nav {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: center;
+            gap: 0 10px;
+            width: 100%;
+        }
+        #mainNav .nav-item { min-width: 0; }
+        #mainNav .nav-item:nth-child(-n+6) { grid-column: 1 / -1; }
+        #mainNav .nav-link {
+            display: block;
+            margin: 0;
+            padding: 11px 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: .94rem;
+        }
+        #mainNav .nav-link.active { text-decoration: none; background: var(--hover-bg); border-radius: 8px; }
+        #mainNav .nav-item:nth-last-child(2) { grid-column: 1; padding: 12px 0 0 10px; }
+        #mainNav .nav-item:last-child { grid-column: 2; padding: 12px 6px 0 0; justify-self: end; }
+        #mainNav .lang-menu { left: 0; right: auto; }
+        #mainNav .lang-btn { min-height: 44px; }
+        #mainNav .theme-toggle { width: 44px; height: 44px; }
+
+        .hero { padding: 116px 0 76px; min-height: 0; }
+        .hero .row { row-gap: 35px; }
+        .hero .col-lg-5.mt-5 { margin-top: 0 !important; }
+        .hero-title { max-width: 780px; font-size: clamp(3.7rem, 8vw, 5.8rem); }
+        .hero-description { max-width: 700px; }
+        .hero-metrics { max-width: 700px; }
+        .hero-visual { max-width: 430px; margin-top: 0; }
+        .floating-tag { display: flex; }
+        .section { padding: 80px 0; }
+        .section-header { margin-bottom: 34px; }
+        .expertise-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+        .expertise-grid > [class*="col-"] { width: auto; padding: 0; }
+        .expertise-card { margin: 0; padding: 28px; border-radius: 12px; }
+        .project-row { grid-template-columns: 24px minmax(160px, 210px) minmax(0, 1fr) 20px; gap: 16px; }
+        .project-info h3 { font-size: 1.45rem !important; }
+        .experience-item { grid-template-columns: 145px minmax(0, 1fr); gap: 20px; }
+        .skills-section { padding: 72px 0; }
+        .contact-section { padding: 80px 0; }
+        .contact-info a { font-size: 1rem; }
+        .footer-main { flex-direction: row; }
+        .footer-links { flex-direction: row; }
+    }
+
+    /* Small tablets and larger phones. */
+    @media (max-width: 767.98px) {
+        :root { --page-gutter: 20px; }
+        .hero { padding: 104px 0 58px; }
+        .hero-title { font-size: clamp(2.9rem, 10.4vw, 4.4rem); margin-bottom: 14px; letter-spacing: -.055em; }
+        .hero-label { font-size: .67rem; }
+        .status-badge { margin-bottom: 18px; }
+        .hero-role { font-size: 1.05rem; margin-bottom: 16px; }
+        .hero-description { font-size: .96rem; line-height: 1.7; margin-bottom: 22px; }
+        .hero-buttons { margin-bottom: 30px; }
+        .hero-metrics { gap: 10px; padding-top: 20px; }
+        .hero-metrics strong { font-size: clamp(1.35rem, 4.4vw, 1.8rem); }
+        .hero-metrics span { font-size: .63rem; }
+        .hero-visual { max-width: 350px; }
+        .floating-tag { display: none; }
+        .visual-overlay { right: -8px; bottom: 10px; padding: 12px 14px; font-size: .78rem; }
+        .visual-overlay span { font-size: .63rem; }
+        .section { padding: 66px 0; }
+        .section-header { margin-bottom: 28px; }
+        .section-header h2 { font-size: clamp(2.15rem, 7vw, 3.4rem); }
+        .row.g-5 { --bs-gutter-y: 1.65rem; --bs-gutter-x: 1.65rem; }
+        .about-intro { font-size: 1.22rem; line-height: 1.5; margin-bottom: 18px; }
+        .about-description { font-size: .95rem; margin-bottom: 16px; line-height: 1.75; }
+        .about-list div { padding: 14px 0; }
+        .about-list strong { font-size: 1rem; }
+        .expertise-card { padding: 24px; }
+        .expertise-card i { font-size: 1.7rem; margin: 16px 0; }
+        .expertise-card h3 { font-size: 1.25rem; }
+        .expertise-card p { font-size: .87rem; line-height: 1.7; }
+        .tft-feature { padding: 58px 0; }
+        .tft-feature-box { grid-template-columns: 1fr; gap: 8px; }
+        .tft-number { font-size: 2.5rem; }
+        .tft-feature-box h2 { margin: 10px 0 14px; font-size: 2.25rem; }
+        .tft-feature-box p { font-size: .94rem; }
+        .feature-link { margin-top: 10px; }
+
+        .project-list { display: grid; gap: 14px; border: 0; }
+        .project-row, .project-row:hover {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0;
+            padding: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 7px 25px rgba(0,0,0,.025);
+            overflow: hidden;
+        }
+        .project-number {
+            order: 0; position: absolute; top: 22px; left: 22px; z-index: 2;
+            padding: 5px 10px; background: rgba(12,12,12,.78);
+            border-radius: 999px; color: #fff; font-size: .74rem;
+        }
+        .project-thumbnail { order: 1; width: 100%; height: auto; aspect-ratio: 16/9; border-radius: 10px; }
+        .project-info { order: 2; padding: 16px 4px 8px; }
+        .project-info > span:first-child { font-size: .61rem !important; margin-bottom: 7px !important; }
+        .project-info h3 { font-size: clamp(1.25rem, 5.2vw, 1.65rem) !important; margin-bottom: 9px !important; }
+        .project-info p { font-size: .85rem !important; line-height: 1.6 !important; }
+        .project-arrow {
+            display: inline-flex; position: absolute; top: 22px; right: 22px;
+            width: 32px; height: 32px; align-items: center; justify-content: center;
+            background: rgba(255,255,255,.94); color: #111; border-radius: 50%;
+            font-size: 1rem;
+        }
+        .project-row:hover .project-arrow { color: #111; }
+        .impact { padding: 46px 0; }
+        .impact .row { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px 12px; }
+        .impact .row > [class*="col-"] { width: auto; padding: 0 4px; }
+        .impact-item strong { font-size: 2.55rem; }
+        .impact-item span { font-size: .64rem; letter-spacing: .05em; }
+        .experience-item { grid-template-columns: 1fr; gap: 6px; padding: 25px 0; }
+        .experience-item span { margin-bottom: 5px; }
+        .experience-item h3 { font-size: 1.32rem; margin-bottom: 10px; }
+        .experience-item p { font-size: .95rem; line-height: 1.7; }
+        .skills-section { padding: 60px 0; }
+        .skills-title h2 { font-size: clamp(2rem, 6.6vw, 3.1rem); }
+        .skills-grid { gap: 9px; margin-top: 22px; }
+        .skills-grid span { padding: 8px 12px; font-size: .8rem; }
+        .contact-section { padding: 66px 0; }
+        .contact-section h2 { font-size: clamp(2.6rem, 8vw, 4rem); margin: 16px 0 20px; letter-spacing: -.05em; }
+        .contact-section p { font-size: .95rem; line-height: 1.7; margin-bottom: 22px; }
+        .contact-info a { font-size: .95rem; margin-bottom: 14px; gap: 12px; }
+        .contact-form input, .contact-form textarea { margin-bottom: 16px; padding: 12px 0; font-size: .95rem; }
+        .contact-form textarea { min-height: 105px; }
+        .contact-form button { min-height: 48px; padding: 13px 20px; font-size: .92rem; }
+        footer { padding: 42px 0 26px; }
+        .footer-main { gap: 24px; margin-bottom: 28px; }
+        .footer-links { flex-direction: row; flex-wrap: wrap; gap: 12px 22px; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; font-size: .73rem; line-height: 1.5; }
+        #backTop { width: 44px; height: 44px; right: 17px; bottom: 18px; }
+    }
+
+    /* Narrow mobile devices. */
+    @media (max-width: 575.98px) {
+        :root { --page-gutter: 18px; }
+        .hero { padding: 98px 0 48px; }
+        .hero .row { row-gap: 20px; }
+        .hero-title { font-size: clamp(2.62rem, 10.9vw, 3.65rem); }
+        .hero-label { letter-spacing: .1em; }
+        .hero-buttons { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px; }
+        .hero-buttons a { padding: 12px 13px; font-size: .83rem; text-align: center; white-space: nowrap; }
+        .hero-buttons .btn-main i { font-size: .85rem; }
+        .hero-visual { max-width: 290px; }
+        .hero-photo { border-radius: 12px; }
+        .visual-overlay { right: -10px; bottom: 9px; }
+        .section { padding: 58px 0; }
+        .section-header h2 { font-size: clamp(2rem, 8vw, 2.8rem); }
+        .expertise-grid { grid-template-columns: minmax(0,1fr); gap: 10px; }
+        .expertise-card { padding: 22px; }
+        .expertise-card i { margin: 12px 0; }
+        .expertise-card p { margin-bottom: 0; }
+        .tft-feature { padding: 52px 0; }
+        .tft-feature-box h2 { font-size: 2rem; }
+        .project-info { padding: 14px 3px 7px; }
+        .impact-item strong { font-size: clamp(2.05rem, 9vw, 2.65rem); }
+        .footer-main { flex-direction: column; }
+        .footer-main p { margin-top: 8px; margin-bottom: 0; }
+        .footer-links { gap: 12px 20px; }
+        .contact-form button { width: 100%; }
+    }
+
+    @media (max-width: 359px) {
+        :root { --page-gutter: 14px; }
+        .hero-title { font-size: 2.35rem; }
+        .hero-buttons { grid-template-columns: 1fr; }
+        .hero-metrics { gap: 6px; }
+        .hero-metrics strong { font-size: 1.25rem; }
+        .hero-metrics span { font-size: .59rem; }
+        .hero-visual { max-width: 255px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1 !important; transform: none !important; }
+    }
+    </style>
 </head>
 
 <body>
@@ -42,8 +423,8 @@
         </a>
 
         <!-- Tombol Hamburger untuk HP -->
-        <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <i class="bi bi-list fs-1" style="color: var(--text);"></i>
+        <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mobile-menu-icon" aria-hidden="true"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
@@ -60,7 +441,7 @@
                 <!-- DROPDOWN BAHASA MODERN (Dipindah ke Kanan Contact) -->
                 <li class="nav-item ms-lg-4 my-2 my-lg-0">
                     <div class="lang-dropdown">
-                        <button class="lang-btn magnetic">
+                        <button type="button" class="lang-btn magnetic" aria-label="Select language" aria-expanded="false">
                             <i class="bi bi-globe2"></i>
                             <span class="current-lang">EN</span>
                             <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
@@ -74,7 +455,7 @@
 
                 <!-- Dark Mode Toggle (Di Sebelah Kanan Bahasa) -->
                 <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                    <button id="themeToggle" class="theme-toggle magnetic">
+                    <button type="button" id="themeToggle" class="theme-toggle magnetic" aria-label="Toggle dark mode">
                         <i class="bi bi-moon-stars"></i>
                     </button>
                 </li>
@@ -155,7 +536,7 @@
             <div class="col-lg-5 mt-5 mt-lg-0">
                 <div class="hero-visual reveal">
                     <div class="hero-photo">
-                        <img src="assets/images/profile.png" alt="Josia Joseph Ntahudi">
+                        <img src="assets/images/profile.png" alt="Josia Joseph Ntahudi" fetchpriority="high" decoding="async">
                     </div>
                     <div class="visual-overlay glass">
                         <span>JOSIA / 2026</span>
@@ -307,7 +688,7 @@
                 <div class="project-number">01</div>
                 <div class="project-thumbnail">
                     <!-- Pastikan kamu memiliki atau mengubah path gambar ini sesuai yang kamu punya -->
-                    <img src="assets/images/tft/tft-ads-analytics.jpg" alt="Digital Marketing & Analytics">
+                    <img src="assets/images/tft/tft-ads-analytics.jpg" alt="Digital Marketing & Analytics" loading="lazy" decoding="async">
                 </div>
                 <div class="project-info">
                     <span>TFT CREATION TEXTILE</span>
@@ -328,7 +709,7 @@
                 <div class="project-number">02</div>
                 <div class="project-thumbnail">
                     <!-- Pastikan kamu memiliki atau mengubah path gambar ini sesuai yang kamu punya -->
-                    <img src="assets/images/tft/tft-social-media.jpg" alt="Social Media & Content Production">
+                    <img src="assets/images/tft/tft-social-media.jpg" alt="Social Media & Content Production" loading="lazy" decoding="async">
                 </div>
                 <div class="project-info">
                     <span>TFT CREATION TEXTILE</span>
@@ -348,7 +729,7 @@
             <a href="projects/spreadsheet-system.html" class="project-row reveal magnetic-row">
                 <div class="project-number">03</div>
                 <div class="project-thumbnail">
-                    <img src="assets/images/spreadsheet/spreadsheet-dashboard.jpg" alt="Spreadsheet Automation System">
+                    <img src="assets/images/spreadsheet/spreadsheet-dashboard.jpg" alt="Spreadsheet Automation System" loading="lazy" decoding="async">
                 </div>
                 <div class="project-info">
                     <span>TFT CREATION TEXTILE</span>
@@ -368,7 +749,7 @@
             <a href="projects/tft-website.html" class="project-row reveal magnetic-row">
                 <div class="project-number">04</div>
                 <div class="project-thumbnail">
-                    <img src="assets/images/website/website-home1.jpg" alt="TFT Creation Website">
+                    <img src="assets/images/website/website-home1.jpg" alt="TFT Creation Website" loading="lazy" decoding="async">
                 </div>
                 <div class="project-info">
                     <span>TFT CREATION TEXTILE</span>
@@ -566,12 +947,40 @@
     </div>
 </footer>
 
-<button id="backTop" class="magnetic">
+<button type="button" id="backTop" class="magnetic" aria-label="Back to top">
     <i class="bi bi-arrow-up"></i>
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+<script>
+    // Mobile-only navigation usability improvements.
+    (() => {
+        const nav = document.getElementById('mainNav');
+        const langButton = document.querySelector('.lang-btn');
+        const langDropdown = document.querySelector('.lang-dropdown');
+        if (nav && window.bootstrap?.Collapse) {
+            nav.querySelectorAll('a.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992 && nav.classList.contains('show')) {
+                        window.bootstrap.Collapse.getOrCreateInstance(nav, { toggle: false }).hide();
+                    }
+                });
+            });
+        }
+        if (langButton && langDropdown) {
+            langButton.addEventListener('click', () => {
+                langButton.setAttribute('aria-expanded', String(langDropdown.classList.contains('active')));
+            });
+            document.addEventListener('click', (event) => {
+                if (!langDropdown.contains(event.target)) langButton.setAttribute('aria-expanded', 'false');
+            });
+            document.querySelectorAll('.lang-option').forEach(button => {
+                button.addEventListener('click', () => langButton.setAttribute('aria-expanded', 'false'));
+            });
+        }
+    })();
+</script>
 
 </body>
 </html>
