@@ -1,0 +1,58 @@
+/* Portfolio light/dark contrast improvements — design accents and layouts remain unchanged. */
+body:not(.dark-mode) {
+  --text: #101318;
+  --muted: #404858;
+  color: var(--text);
+}
+body.dark-mode {
+  --text: #ffffff;
+  --muted: #d4dae4;
+  color: var(--text);
+}
+/* Keep normal content tied to the current theme; preserve intentionally dark
+   sections (contact, workflow, technology and footer) with their own light text. */
+body .project-hero,
+body .project-section,
+body .projects-section,
+body .case-screenshots-section,
+body .case-tech-section,
+body .tft-gallery-section,
+body .tft-features-section,
+body .tft-admin-section {
+  color: var(--text);
+}
+body :is(.project-card,.case-gallery-card,.case-feature,.case-tech-block,.tft-feature-tile,.visual-card,.project-hero,.project-section-title,.project-big-text,.project-section-number,.case-gallery-label,.tft-gallery-lead,.case-intro) {
+  color: var(--text);
+}
+body .project-card :is(h3,h4),
+body .project-section :is(h1,h2,h3),
+body .project-hero h1,
+body .case-tech-block h3,
+body .case-gallery-label,
+body .tft-feature-tile h3 {
+  color: var(--text);
+}
+/* Theme controls and arrow icons must remain visible even offline. */
+body .theme-toggle,
+body .lang-btn,
+body .back-link,
+body .navbar-brand { color: var(--text); }
+body.dark-mode .lang-menu,
+body.dark-mode .project-card,
+body.dark-mode .case-gallery-card,
+body.dark-mode .tft-feature-tile { color: #ffffff; }
+/* Preserve white type on the dark presentation sections in both modes. */
+body .dark-section,
+body .contact-section,
+body .technology-section,
+body .case-workflow,
+body footer { color: #ffffff; }
+body .dark-section :is(h1,h2,h3,h4),
+body .contact-section :is(h1,h2,h3,h4),
+body .technology-section :is(h1,h2,h3,h4),
+body .case-workflow :is(h1,h2,h3,h4),
+body footer :is(h1,h2,h3,h4) { color: #ffffff; }
+/* The active navigation pill uses a blue accent that needs white text in either mode. */
+body .tft-shortcut.active { color: #ffffff; }
+body .theme-toggle { display:inline-flex; align-items:center; justify-content:center; width:44px; min-width:44px; height:44px; border:1px solid var(--border); border-radius:12px; background:var(--surface); }
+body .lang-btn { min-height:44px; }

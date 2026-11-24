@@ -1,0 +1,31 @@
+/* Original portfolio visual language restored. Only TFT's new content is styled here. */
+.tft-restored-page .project-hero h1 { max-width: 950px; margin-inline:auto; }
+.tft-restored-page .project-hero p { max-width: 850px; margin-inline:auto; }
+.tft-restored-page .hero-image-adjust {width:100%; height:auto; max-height:720px; padding:0; display:block; object-fit:contain; border-radius:18px; }
+.tft-restored-page .project-media .large-image {padding:0; overflow:hidden;}
+.tft-gallery-section {scroll-margin-top:100px;}
+.tft-restored-page .tft-gallery-section .project-section-title {max-width:800px;}
+.tft-restored-page .tft-gallery-section .project-section-title h2 em, .tft-features-section .project-section-title h2 em {color:var(--accent);font-style:normal;}
+.tft-gallery-lead {max-width:720px; font-size:1.02rem; line-height:1.7; color:var(--muted);margin:16px 0 0;}
+.tft-gallery-shortcuts {display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;}
+.tft-shortcut {min-height:46px;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:999px;text-decoration:none;font-weight:750;font-size:.84rem;transition:background .2s ease,border-color .2s ease,transform .2s ease;}
+.tft-shortcut.active {background:var(--accent); color:#fff; border-color:var(--accent);}
+.tft-shortcut:hover {transform:translateY(-2px);border-color:var(--accent);color:var(--accent);}
+.tft-shortcut.active:hover {color:#fff;filter:brightness(1.08);}
+.tft-restored-page .tft-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.tft-restored-page .case-gallery-card {border-radius:18px;box-shadow:0 6px 22px rgba(20,30,50,.04);}
+.tft-restored-page .case-gallery-image {aspect-ratio: 1600/838;}
+.tft-restored-page .case-gallery-card .case-gallery-label {min-height:82px;align-items:flex-start;}
+.tft-restored-page .case-gallery-card:hover {box-shadow:0 22px 52px rgba(31,53,91,.13);}
+.tft-features-section {background:var(--surface);}
+.tft-feature-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;}
+.tft-feature-tile {padding:26px;border:1px solid var(--border);border-radius:18px;background:var(--bg);}
+.tft-feature-tile i {display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--hover-bg);color:var(--accent);font-size:1.3rem;border-radius:13px;margin-bottom:24px;}
+.tft-feature-tile h3 {font-weight:800;font-size:1.04rem;letter-spacing:-.025em;line-height:1.35;color:var(--text);}
+.tft-feature-tile p {color:var(--muted);font-size:.86rem;line-height:1.7;margin:12px 0 0;}
+.tft-admin-section {background:var(--bg);}
+.tft-restored-page .tft-stack-grid {grid-template-columns:repeat(4,minmax(0,1fr));}
+.tft-restored-page .technology-section .grid-desc {line-height:1.6;}
+@media(max-width:1100px){.tft-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.tft-restored-page .tft-stack-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:900px){.tft-restored-page .tft-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.tft-restored-page .tft-stack-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.tft-restored-page .tft-grid,.tft-feature-grid,.tft-restored-page .tft-stack-grid{grid-template-columns:1fr;}.tft-restored-page .tft-gallery-section .project-section-title h2{font-size:clamp(1.9rem,8vw,2.5rem);}.tft-restored-page .case-gallery-card .case-gallery-label{min-height:unset;}.tft-gallery-shortcuts{flex-direction:column;}.tft-shortcut{justify-content:center;}.tft-feature-tile{padding:22px;}.tft-restored-page .case-gallery-image{aspect-ratio:16/9;}}

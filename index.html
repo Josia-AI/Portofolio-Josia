@@ -1,23 +1,20 @@
 <!-- =========================================================
      index.html
      ========================================================= -->
-
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Josia Joseph Ntahudi — Digital Marketing, Web Development, UI/UX, System Analysis and Business Automation Portfolio.">
-    <meta name="author" content="Josia Joseph Ntahudi">
-
-    <title>Josia Joseph Ntahudi — Digital Portfolio</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style id="portfolio-responsive-css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Josia Joseph Ntahudi, S.Kom. — Information Systems graduate. Web Development, ERP Systems, UI/UX, and Digital Business Portfolio." name="description"/>
+<meta content="Josia Joseph Ntahudi" name="author"/>
+<title>Josia Joseph Ntahudi, S.Kom. — Digital Portfolio</title>
+<link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+<link href="vendor/icons.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style id="portfolio-responsive-css">
 
     /* ==========================================================
        PORTFOLIO LAYOUT REFINEMENT / RESPONSIVE CSS
@@ -398,589 +395,520 @@
         .reveal { opacity: 1 !important; transform: none !important; }
     }
     </style>
+<link href="design.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="theme-contrast.css">
 </head>
-
 <body>
-
 <!-- PRELOADER -->
 <div id="preloader">
-    <div class="loader-text">
+<div class="loader-text">
         JOSIA<span>.</span>
-    </div>
 </div>
-
+</div>
 <!-- SCROLL PROGRESS -->
 <div id="scrollProgress"></div>
-
 <!-- =========================================================
      NAVBAR
      ========================================================= -->
 <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-    <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
-        <a href="#home" class="navbar-brand">
+<div class="container d-flex justify-content-between align-items-center">
+<!-- Logo -->
+<a class="navbar-brand" href="#home">
             J<span>.</span>
-        </a>
-
-        <!-- Tombol Hamburger untuk HP -->
-        <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="mobile-menu-icon" aria-hidden="true"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                
-                <!-- Menu Navigasi Utama -->
-                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#expertise" class="nav-link">Expertise</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-
-                <!-- DROPDOWN BAHASA MODERN (Dipindah ke Kanan Contact) -->
-                <li class="nav-item ms-lg-4 my-2 my-lg-0">
-                    <div class="lang-dropdown">
-                        <button type="button" class="lang-btn magnetic" aria-label="Select language" aria-expanded="false">
-                            <i class="bi bi-globe2"></i>
-                            <span class="current-lang">EN</span>
-                            <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-                        </button>
-                        <div class="lang-menu">
-                            <button class="lang-option active" data-lang="en">English (EN)</button>
-                            <button class="lang-option" data-lang="id">Indonesia (ID)</button>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Dark Mode Toggle (Di Sebelah Kanan Bahasa) -->
-                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                    <button type="button" id="themeToggle" class="theme-toggle magnetic" aria-label="Toggle dark mode">
-                        <i class="bi bi-moon-stars"></i>
-                    </button>
-                </li>
-                
-            </ul>
-        </div>
-    </div>
+</a>
+<!-- Tombol Hamburger untuk HP -->
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0 shadow-none p-0" data-bs-target="#mainNav" type="button">
+<span aria-hidden="true" class="mobile-menu-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto align-items-lg-center">
+<!-- Menu Navigasi Utama -->
+<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<!-- DROPDOWN BAHASA MODERN (Dipindah ke Kanan Contact) -->
+<li class="nav-item ms-lg-4 my-2 my-lg-0">
+<div class="lang-dropdown">
+<button aria-expanded="false" aria-label="Select language" class="lang-btn magnetic" type="button">
+<i class="bi bi-globe2"></i>
+<span class="current-lang">EN</span>
+<i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+</button>
+<div aria-label="Language options" class="lang-menu" role="group">
+<button class="lang-option active" data-lang="en" type="button">English (EN)</button>
+<button class="lang-option" data-lang="id" type="button">Indonesia (ID)</button>
+</div>
+</div>
+</li>
+<!-- Dark Mode Toggle (Di Sebelah Kanan Bahasa) -->
+<li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+<button aria-label="Toggle dark mode" aria-pressed="false" class="theme-toggle magnetic" id="themeToggle" type="button">
+<i class="bi bi-moon-stars"></i>
+</button>
+</li>
+</ul>
+</div>
+</div>
 </nav>
-
 <!-- HERO SECTION -->
-<section id="home" class="hero">
-    <div class="hero-grid"></div>
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-
-            <div class="col-lg-7">
-                <div class="status-badge reveal">
-                    <span></span>
+<section class="hero" id="home">
+<div class="hero-grid"></div>
+<div class="container">
+<div class="row align-items-center min-vh-100">
+<div class="col-lg-7">
+<div class="status-badge reveal">
+<span></span>
                     Available for opportunities
                 </div>
-
-                <div class="hero-label reveal">
-                    INFORMATION SYSTEMS × DIGITAL
-                </div>
-
-                <h1 class="hero-title reveal">
+<div class="hero-label reveal">
+<span class="lang-en">S.Kom. · INFORMATION SYSTEMS GRADUATE</span>
+<span class="lang-id">S.Kom. · SARJANA SISTEM INFORMASI</span>
+</div>
+<h1 class="hero-title reveal">
                     Josia Joseph
-                    <br>
-                    <span>Ntahudi.</span>
-                </h1>
-
-                <div class="hero-role reveal">
-                    <span class="lang-en">I do 
+                    <br/>
+<span>Ntahudi.</span>
+</h1>
+<div class="hero-role reveal">
+<span class="lang-en">I do 
                         <span class="typewrite text-muted" data-period="2000" data-type='[ "Digital Marketing.", "Web Development.", "UI/UX Design.", "System Analysis." ]'>
-                            <span class="wrap"></span>
-                        </span>
-                    </span>
-                    <span class="lang-id">Fokus di 
+<span class="wrap"></span>
+</span>
+</span>
+<span class="lang-id">Fokus di 
                         <span class="typewrite text-muted" data-period="2000" data-type='[ "Pemasaran Digital.", "Pengembangan Web.", "Desain UI/UX.", "Analisis Sistem." ]'>
-                            <span class="wrap"></span>
-                        </span>
-                    </span>
-                </div>
-
-                <p class="hero-description reveal">
-                    <span class="lang-en">I transform business needs into practical digital solutions through technology, creative design, marketing strategy, automation, and data-driven thinking.</span>
-                    <span class="lang-id">Saya mengubah kebutuhan bisnis menjadi solusi digital praktis melalui teknologi, desain kreatif, strategi pemasaran, otomatisasi, dan pemikiran berbasis data.</span>
-                </p>
-
-                <div class="hero-buttons reveal">
-                    <a href="#projects" class="btn-main magnetic">
-                        <span class="lang-en">Explore Projects</span>
-                        <span class="lang-id">Lihat Projek</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                    <a href="#contact" class="btn-outline magnetic">
-                        <span class="lang-en">Let's Connect</span>
-                        <span class="lang-id">Hubungi Saya</span>
-                    </a>
-                </div>
-
-                <div class="hero-metrics reveal">
-                    <div>
-                        <strong>4–5x</strong>
-                        <span>ROAS Improvement</span>
+<span class="wrap"></span>
+</span>
+</span>
+</div>
+<p class="hero-description reveal">
+<span class="lang-en">I transform business needs into practical digital solutions through technology, creative design, marketing strategy, automation, and data-driven thinking.</span>
+<span class="lang-id">Saya mengubah kebutuhan bisnis menjadi solusi digital praktis melalui teknologi, desain kreatif, strategi pemasaran, otomatisasi, dan pemikiran berbasis data.</span>
+</p>
+<div class="hero-buttons reveal">
+<a class="btn-main magnetic" href="#projects">
+<span class="lang-en">Explore Projects</span>
+<span class="lang-id">Lihat Projek</span>
+<i class="bi bi-arrow-up-right"></i>
+</a>
+<a class="btn-outline magnetic" href="#contact">
+<span class="lang-en">Let's Connect</span>
+<span class="lang-id">Hubungi Saya</span>
+</a>
+</div>
+<div class="hero-metrics reveal">
+<div>
+<strong>06</strong>
+<span>Selected Projects</span>
+</div>
+<div>
+<strong>03</strong>
+<span>Company Websites</span>
+</div>
+<div>
+<strong>02</strong>
+<span>Business Systems</span>
+</div>
+</div>
+</div>
+<div class="col-lg-5 mt-5 mt-lg-0">
+<div class="hero-visual reveal">
+<div class="hero-photo">
+<img alt="Josia Joseph Ntahudi" decoding="async" fetchpriority="high" src="assets/images/profile.png"/>
+</div>
+<div class="visual-overlay glass">
+<span>JOSIA / 2026</span>
+<strong>DIGITAL<br/>PROFESSIONAL</strong>
+</div>
+<div class="floating-tag tag-one glass">
+<i class="bi bi-code-slash"></i> Web Development
                     </div>
-                    <div>
-                        <strong>+100%</strong>
-                        <span>Product Visibility</span>
+<div class="floating-tag tag-two glass">
+<i class="bi bi-graph-up-arrow"></i> Digital Marketing
                     </div>
-                    <div>
-                        <strong>+30%</strong>
-                        <span>Organic Traffic</span>
+<div class="floating-tag tag-three glass">
+<i class="bi bi-diagram-3"></i> Business Automation
                     </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 mt-5 mt-lg-0">
-                <div class="hero-visual reveal">
-                    <div class="hero-photo">
-                        <img src="assets/images/profile.png" alt="Josia Joseph Ntahudi" fetchpriority="high" decoding="async">
-                    </div>
-                    <div class="visual-overlay glass">
-                        <span>JOSIA / 2026</span>
-                        <strong>DIGITAL<br>PROFESSIONAL</strong>
-                    </div>
-                    <div class="floating-tag tag-one glass">
-                        <i class="bi bi-code-slash"></i> Web Development
-                    </div>
-                    <div class="floating-tag tag-two glass">
-                        <i class="bi bi-graph-up-arrow"></i> Digital Marketing
-                    </div>
-                    <div class="floating-tag tag-three glass">
-                        <i class="bi bi-diagram-3"></i> Business Automation
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ABOUT SECTION -->
-<section id="about" class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <span>01 / ABOUT ME</span>
-            <h2>
-                <span class="lang-en">More than a student.<br><em>I'm a builder.</em></span>
-                <span class="lang-id">Lebih dari mahasiswa.<br><em>Saya kreator.</em></span>
-            </h2>
-        </div>
-
-        <div class="row g-5">
-            <div class="col-lg-7">
-                <p class="about-intro reveal">
-                    <span class="lang-en">I am an Information Systems student with practical experience developing digital solutions aligned with real business needs.</span>
-                    <span class="lang-id">Saya mahasiswa Sistem Informasi dengan pengalaman praktis membangun solusi digital yang sesuai dengan kebutuhan bisnis nyata.</span>
-                </p>
-                <p class="about-description reveal">
-                    <span class="lang-en">My experience covers digital marketing, e-commerce optimization, business automation, spreadsheet systems, website development, UI/UX, system analysis, and database implementation.</span>
-                    <span class="lang-id">Pengalaman saya mencakup pemasaran digital, optimasi e-commerce, otomatisasi bisnis, sistem spreadsheet, pengembangan website, UI/UX, analisis sistem, dan implementasi database.</span>
-                </p>
-                <p class="about-description reveal">
-                    <span class="lang-en">Rather than focusing only on technology, I focus on how technology can solve problems, improve workflows, increase efficiency, and create measurable business impact.</span>
-                    <span class="lang-id">Bukan hanya sekadar berfokus pada teknologi, saya fokus pada bagaimana teknologi dapat menyelesaikan masalah, memperbaiki alur kerja, meningkatkan efisiensi, dan menciptakan dampak bisnis.</span>
-                </p>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="about-list reveal">
-                    <div><span>01</span><strong>Digital Business</strong></div>
-                    <div><span>02</span><strong>System Development</strong></div>
-                    <div><span>03</span><strong>Business Automation</strong></div>
-                    <div><span>04</span><strong>Digital Marketing</strong></div>
-                    <div><span>05</span><strong>UI / UX Design</strong></div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="section" id="about">
+<div class="container">
+<div class="section-header reveal">
+<span>01 / ABOUT ME</span>
+<h2>
+<span class="lang-en">Information Systems graduate.<br/><em>I build digital solutions.</em></span>
+<span class="lang-id">Sarjana Komputer (S.Kom.).<br/><em>Membangun solusi digital.</em></span>
+</h2>
+</div>
+<div class="row g-5">
+<div class="col-lg-7">
+<p class="about-intro reveal">
+<span class="lang-en">I hold a Sarjana Komputer (S.Kom.) degree in Information Systems, with practical experience developing websites, ERP systems, and digital solutions aligned with real business needs.</span>
+<span class="lang-id">Saya lulusan Sarjana Komputer (S.Kom.) dari Program Studi Sistem Informasi, dengan pengalaman praktis mengembangkan website, sistem ERP, dan solusi digital sesuai kebutuhan bisnis nyata.</span>
+</p>
+<p class="about-description reveal">
+<span class="lang-en">My experience covers digital marketing, e-commerce optimization, business automation, spreadsheet systems, website development, UI/UX, system analysis, and database implementation.</span>
+<span class="lang-id">Pengalaman saya mencakup pemasaran digital, optimasi e-commerce, otomatisasi bisnis, sistem spreadsheet, pengembangan website, UI/UX, analisis sistem, dan implementasi database.</span>
+</p>
+<p class="about-description reveal">
+<span class="lang-en">Rather than focusing only on technology, I focus on how technology can solve problems, improve workflows, increase efficiency, and create measurable business impact.</span>
+<span class="lang-id">Bukan hanya sekadar berfokus pada teknologi, saya fokus pada bagaimana teknologi dapat menyelesaikan masalah, memperbaiki alur kerja, meningkatkan efisiensi, dan menciptakan dampak bisnis.</span>
+</p>
+</div>
+<div class="col-lg-5">
+<div class="about-list reveal">
+<div><span>01</span><strong>Digital Business</strong></div>
+<div><span>02</span><strong>System Development</strong></div>
+<div><span>03</span><strong>Business Automation</strong></div>
+<div><span>04</span><strong>Digital Marketing</strong></div>
+<div><span>05</span><strong>UI / UX Design</strong></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- EXPERTISE SECTION -->
-<section id="expertise" class="section dark-section">
-    <div class="container">
-        <div class="section-header light reveal">
-            <span>02 / EXPERTISE</span>
-            <h2>
-                <span class="lang-en">What I <em>do.</em></span>
-                <span class="lang-id">Keahlian <em>saya.</em></span>
-            </h2>
-        </div>
-
-        <div class="row g-0 expertise-grid">
-            <div class="col-md-6 col-lg-3">
-                <div class="expertise-card reveal">
-                    <small>01</small>
-                    <i class="bi bi-megaphone"></i>
-                    <h3>Digital Marketing</h3>
-                    <p class="lang-en">Marketplace management, SEO optimization, content creation, paid advertising, promotions, and performance improvement.</p>
-                    <p class="lang-id">Manajemen marketplace, optimasi SEO, pembuatan konten, iklan berbayar, promosi, dan peningkatan performa.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="expertise-card reveal">
-                    <small>02</small>
-                    <i class="bi bi-window"></i>
-                    <h3>Web Development</h3>
-                    <p class="lang-en">Responsive websites, interactive interfaces, business websites, e-commerce platforms, and database-driven applications.</p>
-                    <p class="lang-id">Website responsif, antarmuka interaktif, website bisnis, platform e-commerce, dan aplikasi berbasis database.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="expertise-card reveal">
-                    <small>03</small>
-                    <i class="bi bi-bezier2"></i>
-                    <h3>UI / UX</h3>
-                    <p class="lang-en">User interface design, user experience, wireframes, mockups, visual hierarchy, and responsive digital experiences.</p>
-                    <p class="lang-id">Desain antarmuka, pengalaman pengguna, wireframe, mockup, hierarki visual, dan pengalaman digital yang responsif.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="expertise-card reveal">
-                    <small>04</small>
-                    <i class="bi bi-diagram-3"></i>
-                    <h3>System Analysis</h3>
-                    <p class="lang-en">Business process modeling, database architecture, workflow analysis, automation, and operational improvement.</p>
-                    <p class="lang-id">Pemodelan proses bisnis, arsitektur database, analisis alur kerja, otomatisasi, dan perbaikan operasional.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="section dark-section" id="expertise">
+<div class="container">
+<div class="section-header light reveal">
+<span>02 / EXPERTISE</span>
+<h2>
+<span class="lang-en">What I <em>do.</em></span>
+<span class="lang-id">Keahlian <em>saya.</em></span>
+</h2>
+</div>
+<div class="row g-0 expertise-grid">
+<div class="col-md-6 col-lg-3">
+<div class="expertise-card reveal">
+<small>01</small>
+<i class="bi bi-megaphone"></i>
+<h3>Digital Marketing</h3>
+<p class="lang-en">Marketplace management, SEO optimization, content creation, paid advertising, promotions, and performance improvement.</p>
+<p class="lang-id">Manajemen marketplace, optimasi SEO, pembuatan konten, iklan berbayar, promosi, dan peningkatan performa.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="expertise-card reveal">
+<small>02</small>
+<i class="bi bi-window"></i>
+<h3>Web Development</h3>
+<p class="lang-en">Responsive websites, interactive interfaces, business websites, e-commerce platforms, and database-driven applications.</p>
+<p class="lang-id">Website responsif, antarmuka interaktif, website bisnis, platform e-commerce, dan aplikasi berbasis database.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="expertise-card reveal">
+<small>03</small>
+<i class="bi bi-bezier2"></i>
+<h3>UI / UX</h3>
+<p class="lang-en">User interface design, user experience, wireframes, mockups, visual hierarchy, and responsive digital experiences.</p>
+<p class="lang-id">Desain antarmuka, pengalaman pengguna, wireframe, mockup, hierarki visual, dan pengalaman digital yang responsif.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="expertise-card reveal">
+<small>04</small>
+<i class="bi bi-diagram-3"></i>
+<h3>System Analysis</h3>
+<p class="lang-en">Business process modeling, database architecture, workflow analysis, automation, and operational improvement.</p>
+<p class="lang-id">Pemodelan proses bisnis, arsitektur database, analisis alur kerja, otomatisasi, dan perbaikan operasional.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- TFT FEATURE -->
 <section class="tft-feature">
-    <div class="container">
-        <div class="tft-feature-box reveal">
-            <div class="tft-number">01</div>
-            <div>
-                <span>FEATURED EXPERIENCE</span>
-                <h2>TFT Creation Textile</h2>
-                <p class="lang-en">A practical combination of digital marketing, e-commerce optimization, business automation, inventory management, customer service, and web development.</p>
-                <p class="lang-id">Kombinasi praktis dari pemasaran digital, optimasi e-commerce, otomatisasi bisnis, manajemen inventaris, layanan pelanggan, dan pengembangan web.</p>
-                
-                <a href="projects/tft-creation.html" class="feature-link magnetic">
-                    <span class="lang-en">View TFT Experience</span>
-                    <span class="lang-id">Lihat Pengalaman TFT</span>
-                    <i class="bi bi-arrow-up-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="tft-feature-box reveal">
+<div class="tft-number"><i aria-hidden="true" class="bi bi-stars"></i></div>
+<div>
+<span>FEATURED CASE STUDY</span>
+<h2>TFT Creation Textile</h2>
+<p class="lang-en">A practical combination of digital marketing, e-commerce optimization, business automation, inventory management, customer service, and web development.</p>
+<p class="lang-id">Kombinasi praktis dari pemasaran digital, optimasi e-commerce, otomatisasi bisnis, manajemen inventaris, layanan pelanggan, dan pengembangan web.</p>
+<a class="feature-link magnetic" href="projects/tft-website.html">
+<span class="lang-en">Explore Website Case Study</span>
+<span class="lang-id">Lihat Studi Kasus Website</span>
+<i class="bi bi-arrow-up-right"></i>
+</a>
+</div>
+</div>
+</div>
 </section>
-
 <!-- PROJECTS SECTION -->
-<section id="projects" class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <span>03 / SELECTED PROJECTS</span>
-            <h2>
-                <span class="lang-en">Built from <em>real problems.</em></span>
-                <span class="lang-id">Dibangun dari <em>masalah nyata.</em></span>
-            </h2>
-        </div>
-
-        <div class="project-list">
-            <!-- 01. DIGITAL MARKETING & PERFORMANCE -->
-            <a href="projects/tft-digital-marketing.html" class="project-row reveal magnetic-row">
-                <div class="project-number">01</div>
-                <div class="project-thumbnail">
-                    <!-- Pastikan kamu memiliki atau mengubah path gambar ini sesuai yang kamu punya -->
-                    <img src="assets/images/tft/tft-ads-analytics.jpg" alt="Digital Marketing & Analytics" loading="lazy" decoding="async">
-                </div>
-                <div class="project-info">
-                    <span>TFT CREATION TEXTILE</span>
-                    <h3>
-                        <span class="lang-en">Digital Marketing & Analytics</span>
-                        <span class="lang-id">Pemasaran Digital & Analitik</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">Focused on managing targeted Google Ads and Shopee ad campaigns, integrated with Google Analytics 4 (GA4) and Tag Manager to track conversions and optimize ROAS.</span>
-                        <span class="lang-id">Fokus pada manajemen kampanye Google Ads dan iklan Shopee, terintegrasi dengan Google Analytics 4 (GA4) dan Tag Manager untuk melacak konversi serta mengoptimalkan ROAS.</span>
-                    </p>
-                </div>
-                <i class="bi bi-arrow-up-right project-arrow"></i>
-            </a>
-
-            <!-- 02. SOCIAL MEDIA & CONTENT PRODUCTION -->
-            <a href="projects/tft-content-creation.html" class="project-row reveal magnetic-row">
-                <div class="project-number">02</div>
-                <div class="project-thumbnail">
-                    <!-- Pastikan kamu memiliki atau mengubah path gambar ini sesuai yang kamu punya -->
-                    <img src="assets/images/tft/tft-social-media.jpg" alt="Social Media & Content Production" loading="lazy" decoding="async">
-                </div>
-                <div class="project-info">
-                    <span>TFT CREATION TEXTILE</span>
-                    <h3>
-                        <span class="lang-en">Social Media & Content Production</span>
-                        <span class="lang-id">Media Sosial & Produksi Konten</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">Producing engaging visual content through photography, videography, and editing (CapCut/Canva), including AI-assisted garment concept exploration to boost audience engagement.</span>
-                        <span class="lang-id">Memproduksi konten visual yang menarik melalui fotografi, videografi, dan editing (CapCut/Canva), termasuk eksplorasi konsep pakaian menggunakan AI untuk meningkatkan interaksi audiens.</span>
-                    </p>
-                </div>
-                <i class="bi bi-arrow-up-right project-arrow"></i>
-            </a>
-
-            <!-- 03. SPREADSHEET -->
-            <a href="projects/spreadsheet-system.html" class="project-row reveal magnetic-row">
-                <div class="project-number">03</div>
-                <div class="project-thumbnail">
-                    <img src="assets/images/spreadsheet/spreadsheet-dashboard.jpg" alt="Spreadsheet Automation System" loading="lazy" decoding="async">
-                </div>
-                <div class="project-info">
-                    <span>TFT CREATION TEXTILE</span>
-                    <h3>
-                        <span class="lang-en">Business Automation & Spreadsheet System</span>
-                        <span class="lang-id">Otomatisasi Bisnis & Sistem Spreadsheet</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">Automated PO, DO, Surat Jalan, Receipts, Tax Invoices, inventory, payment status, and document tracking.</span>
-                        <span class="lang-id">Otomatisasi PO, DO, Surat Jalan, Kwitansi, Faktur Pajak, inventaris, status pembayaran, dan pelacakan dokumen.</span>
-                    </p>
-                </div>
-                <i class="bi bi-arrow-up-right project-arrow"></i>
-            </a>
-
-            <!-- 04. TFT WEBSITE -->
-            <a href="projects/tft-website.html" class="project-row reveal magnetic-row">
-                <div class="project-number">04</div>
-                <div class="project-thumbnail">
-                    <img src="assets/images/website/website-home1.jpg" alt="TFT Creation Website" loading="lazy" decoding="async">
-                </div>
-                <div class="project-info">
-                    <span>TFT CREATION TEXTILE</span>
-                    <h3>TFT Creation Website</h3>
-                    <p>
-                        <span class="lang-en">End-to-end website development using CodeIgniter, CSS, JavaScript, and MySQL.</span>
-                        <span class="lang-id">Pengembangan website secara menyeluruh menggunakan CodeIgniter, CSS, JavaScript, dan MySQL.</span>
-                    </p>
-                </div>
-                <i class="bi bi-arrow-up-right project-arrow"></i>
-            </a>
-        </div>
-
-    </div>
+<section class="section projects-section" id="projects">
+<div class="container">
+<div class="section-header reveal project-section-heading">
+<div>
+<span>03 / SELECTED PROJECTS</span>
+<h2><span class="lang-en">Selected work. <em>Real impact.</em></span><span class="lang-id">Karya pilihan. <em>Dampak nyata.</em></span></h2>
+<p class="projects-intro"><span class="lang-en">A selection of web development, business systems and digital projects.</span><span class="lang-id">Pilihan proyek pengembangan website, sistem bisnis, dan solusi digital.</span></p>
+</div>
+<div class="project-count">06 <span>PROJECTS</span></div>
+</div>
+<div aria-label="Filter projects" class="project-filters reveal" role="group">
+<button aria-pressed="true" class="project-filter active" data-filter="all" type="button"><span class="lang-en">All projects</span><span class="lang-id">Semua proyek</span><span class="filter-number">06</span></button>
+<button aria-pressed="false" class="project-filter" data-filter="website" type="button"><span class="lang-en">Websites</span><span class="lang-id">Website</span><span class="filter-number">03</span></button>
+<button aria-pressed="false" class="project-filter" data-filter="system" type="button"><span class="lang-en">Systems</span><span class="lang-id">Sistem</span><span class="filter-number">02</span></button>
+<button aria-pressed="false" class="project-filter" data-filter="marketing" type="button"><span class="lang-en">Marketing</span><span class="lang-id">Pemasaran</span><span class="filter-number">01</span></button>
+</div>
+<div class="project-list" id="projectList">
+<a aria-label="HAP Company Website: view case study" class="project-row project-card reveal" data-category="website" href="projects/hap-website.html">
+<div class="project-thumbnail">
+<img alt="Website HAP — PT Hasta Abadi Perkasa" decoding="async" loading="lazy" src="assets/images/cases/hap/hap-card.webp"/>
+<span class="project-cover-index">01 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">PT HASTA ABADI PERKASA</span><span class="project-category">Website</span></div>
+<h3><span class="lang-en">HAP Company Website</span><span class="lang-id">Website Perusahaan HAP</span></h3>
+<p><span class="lang-en">Actual HAP website showcase: marine and industrial product catalogs, production process, BKI certificates, and sales contact.</span><span class="lang-id">Website HAP dengan katalog marine-industri, proses produksi, sertifikat BKI, serta kontak penawaran.</span></p>
+<div aria-label="Technology stack" class="project-tech-mini"><span>CodeIgniter</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+<a aria-label="TSG Industrial Website: view case study" class="project-row project-card reveal" data-category="website" href="projects/tsg-website.html">
+<div class="project-thumbnail">
+<img alt="Website TSG — PT Tangguh Sukses Globalindo" decoding="async" loading="lazy" src="assets/images/cases/tsg/tsg-card.webp"/>
+<span class="project-cover-index">02 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">PT TANGGUH SUKSES GLOBALINDO</span><span class="project-category">Website</span></div>
+<h3><span class="lang-en">TSG Industrial Website</span><span class="lang-id">Website Industri TSG</span></h3>
+<p><span class="lang-en">Industrial materials website with product catalogs, company profile, and WhatsApp quotation access.</span><span class="lang-id">Website material industri dengan katalog produk, profil perusahaan, dan akses penawaran WhatsApp.</span></p>
+<div aria-label="Technology stack" class="project-tech-mini"><span>CodeIgniter</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+<a aria-label="ERP SYSTEM GLOBAL: view case study" class="project-row project-card reveal" data-category="system" href="projects/erp-system.html">
+<div class="project-thumbnail">
+<img alt="ERP business management system" decoding="async" loading="lazy" src="assets/images/cases/erp/erp-card.webp"/>
+<span class="project-cover-index">03 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">ERP SYSTEM GLOBAL / INTERNAL APP</span><span class="project-category">System</span></div>
+<h3><span class="lang-en">ERP SYSTEM GLOBAL</span><span class="lang-id">ERP SYSTEM GLOBAL</span></h3>
+<p><span class="lang-en">ERP dashboard for quotations, invoices, delivery orders, purchase orders, master data, user roles, and reports.</span><span class="lang-id">Dashboard ERP untuk penawaran, invoice, surat jalan, purchase order, data master, level pengguna, dan laporan.</span></p>
+<div aria-label="Technology stack" class="project-tech-mini"><span>CodeIgniter</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+<a aria-label="TFT Creation Website: view case study" class="project-row project-card reveal" data-category="website" href="projects/tft-website.html">
+<div class="project-thumbnail">
+<img alt="TFT Creation product catalog: original project screenshot" decoding="async" loading="lazy" src="assets/images/cases/tft/site-03.webp"/>
+<span class="project-cover-index">04 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">TFT CREATION TEXTILE</span><span class="project-category">Website</span></div>
+<h3><span class="lang-en">TFT Creation Website</span><span class="lang-id">Website TFT Creation</span></h3>
+<p><span class="lang-en">Textile business website with a product catalog, responsive interface, and database-backed administration.</span><span class="lang-id">Website bisnis tekstil dengan katalog produk, antarmuka responsif, dan administrasi berbasis database.</span></p>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+<a aria-label="Spreadsheet Automation System: view case study" class="project-row project-card reveal" data-category="system" href="projects/spreadsheet-system.html">
+<div class="project-thumbnail">
+<img alt="Spreadsheet Business Automation" decoding="async" loading="lazy" src="assets/images/spreadsheet/spreadsheet-dashboard.jpg"/>
+<span class="project-cover-index">05 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">TFT CREATION TEXTILE</span><span class="project-category">System</span></div>
+<h3><span class="lang-en">Spreadsheet Automation System</span><span class="lang-id">Sistem Otomatisasi Spreadsheet</span></h3>
+<p><span class="lang-en">Operational spreadsheet system for purchase orders, delivery documents, invoices, inventory, and reporting.</span><span class="lang-id">Sistem spreadsheet operasional untuk PO, dokumen pengiriman, invoice, inventaris, dan pelaporan.</span></p>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+<a aria-label="Digital Marketing &amp; Analytics: view case study" class="project-row project-card reveal" data-category="marketing" href="projects/tft-digital-marketing.html">
+<div class="project-thumbnail">
+<img alt="Digital marketing and analytics" decoding="async" loading="lazy" src="assets/images/tft/tft-ads-analytics.jpg"/>
+<span class="project-cover-index">06 / 06</span>
+</div>
+<div class="project-info">
+<div class="project-topline"><span class="project-client">TFT CREATION TEXTILE</span><span class="project-category">Marketing</span></div>
+<h3><span class="lang-en">Digital Marketing &amp; Analytics</span><span class="lang-id">Pemasaran Digital &amp; Analitik</span></h3>
+<p><span class="lang-en">Performance marketing, marketplace SEO, campaign tracking, and analytics for commerce operations.</span><span class="lang-id">Pemasaran berbasis performa, SEO marketplace, pelacakan kampanye, dan analitik untuk operasional bisnis.</span></p>
+<span class="project-view"><span class="lang-en">View project</span><span class="lang-id">Lihat proyek</span><i aria-hidden="true" class="bi bi-arrow-up-right"></i></span>
+</div>
+</a>
+</div>
+<p class="project-empty" hidden="" id="projectEmpty"><span class="lang-en">No projects in this category.</span><span class="lang-id">Tidak ada proyek dalam kategori ini.</span></p>
+</div>
 </section>
-
 <!-- IMPACT SECTION -->
 <section class="impact">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="impact-item reveal">
-                    <strong data-count="100">0</strong>
-                    <span>Product Visibility %</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="impact-item reveal">
-                    <strong data-count="30">0</strong>
-                    <span>Organic Traffic %</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="impact-item reveal">
-                    <strong data-count="25">0</strong>
-                    <span>Monthly Sales %</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="impact-item reveal">
-                    <strong data-count="15">0</strong>
-                    <span>Repeat Orders %</span>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row g-4">
+<div class="col-md-3">
+<div class="impact-item reveal">
+<strong data-count="100">0</strong>
+<span>Company Websites %</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="impact-item reveal">
+<strong data-count="30">0</strong>
+<span>Business Systems %</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="impact-item reveal">
+<strong data-count="25">0</strong>
+<span>Monthly Sales %</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="impact-item reveal">
+<strong data-count="15">0</strong>
+<span>Repeat Orders %</span>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- EXPERIENCE SECTION -->
-<section id="experience" class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <span>04 / EXPERIENCE</span>
-            <h2>
-                <span class="lang-en">Experience across <em>technology & business.</em></span>
-                <span class="lang-id">Pengalaman <em>teknologi & bisnis.</em></span>
-            </h2>
-        </div>
-
-        <div class="experience-list">
-            <div class="experience-item reveal">
-                <div class="experience-year">2025 — Present</div>
-                <div>
-                    <span>DIGITAL MARKETING</span>
-                    <h3>TFT Creation Textile</h3>
-                    <p class="lang-en">Managed Shopee operations, marketplace SEO, social media, paid advertising, promotional strategies, customer service, business automation, inventory systems, and website development.</p>
-                    <p class="lang-id">Mengelola operasional Shopee, SEO marketplace, media sosial, iklan berbayar, strategi promosi, layanan pelanggan, sistem otomatisasi, dan pengembangan web.</p>
-                </div>
-            </div>
-
-            <div class="experience-item reveal">
-                <div class="experience-year">Sept 2025 — Dec 2025</div>
-                <div>
-                    <span>WEB DEVELOPER INTERN</span>
-                    <h3>PT. Jared Global Sejahtera</h3>
-                    <p class="lang-en">Developed responsive company profile and digital e-catalog websites, including UI/UX, sitemap, portfolio filtering, image sliders, WhatsApp integration, and testing.</p>
-                    <p class="lang-id">Membangun website profil perusahaan dan e-katalog digital yang responsif, mencakup UI/UX, sitemap, integrasi WhatsApp, dan pengujian website.</p>
-                </div>
-            </div>
-
-            <div class="experience-item reveal">
-                <div class="experience-year">Sept 2024 — Feb 2025</div>
-                <div>
-                    <span>INFRASTRUCTURE PERFORMANCE</span>
-                    <h3>PT. Telkom Infrastructure Indonesia</h3>
-                    <p class="lang-en">Supported infrastructure performance monitoring, OPEX/CAPEX data, Excel and Google Sheets processing, reporting, and data analysis.</p>
-                    <p class="lang-id">Mendukung pemantauan performa infrastruktur, pemrosesan data OPEX/CAPEX, pelaporan, dan analisis data via Excel dan Google Sheets.</p>
-                </div>
-            </div>
-
-            <div class="experience-item reveal">
-                <div class="experience-year">Mar 2023 — May 2024</div>
-                <div>
-                    <span>ADMIN STAFF</span>
-                    <h3>PT. Hasta Abadi Perkasa</h3>
-                    <p class="lang-en">Managed office inventory, administrative operations, personnel files, client databases, correspondence, and operational support.</p>
-                    <p class="lang-id">Mengelola inventaris kantor, operasional administrasi, database klien, korespondensi, dan dukungan operasional secara umum.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="section" id="experience">
+<div class="container">
+<div class="section-header reveal">
+<span>04 / EXPERIENCE</span>
+<h2>
+<span class="lang-en">Experience across <em>technology &amp; business.</em></span>
+<span class="lang-id">Pengalaman <em>teknologi &amp; bisnis.</em></span>
+</h2>
+</div>
+<div class="experience-list">
+<div class="experience-item reveal">
+<div class="experience-year">2025 — Present</div>
+<div>
+<span>DIGITAL MARKETING</span>
+<h3>TFT Creation Textile</h3>
+<p class="lang-en">Managed Shopee operations, marketplace SEO, social media, paid advertising, promotional strategies, customer service, business automation, inventory systems, and website development.</p>
+<p class="lang-id">Mengelola operasional Shopee, SEO marketplace, media sosial, iklan berbayar, strategi promosi, layanan pelanggan, sistem otomatisasi, dan pengembangan web.</p>
+</div>
+</div>
+<div class="experience-item reveal">
+<div class="experience-year">Sept 2025 — Dec 2025</div>
+<div>
+<span>WEB DEVELOPER INTERN</span>
+<h3>PT. Jared Global Sejahtera</h3>
+<p class="lang-en">Developed responsive company profile and digital e-catalog websites, including UI/UX, sitemap, portfolio filtering, image sliders, WhatsApp integration, and testing.</p>
+<p class="lang-id">Membangun website profil perusahaan dan e-katalog digital yang responsif, mencakup UI/UX, sitemap, integrasi WhatsApp, dan pengujian website.</p>
+</div>
+</div>
+<div class="experience-item reveal">
+<div class="experience-year">Sept 2024 — Feb 2025</div>
+<div>
+<span>INFRASTRUCTURE PERFORMANCE</span>
+<h3>PT. Telkom Infrastructure Indonesia</h3>
+<p class="lang-en">Supported infrastructure performance monitoring, OPEX/CAPEX data, Excel and Google Sheets processing, reporting, and data analysis.</p>
+<p class="lang-id">Mendukung pemantauan performa infrastruktur, pemrosesan data OPEX/CAPEX, pelaporan, dan analisis data via Excel dan Google Sheets.</p>
+</div>
+</div>
+<div class="experience-item reveal">
+<div class="experience-year">Mar 2023 — May 2024</div>
+<div>
+<span>ADMIN STAFF</span>
+<h3>PT. Hasta Abadi Perkasa</h3>
+<p class="lang-en">Managed office inventory, administrative operations, personnel files, client databases, correspondence, and operational support.</p>
+<p class="lang-id">Mengelola inventaris kantor, operasional administrasi, database klien, korespondensi, dan dukungan operasional secara umum.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- SKILLS SECTION -->
 <section class="skills-section">
-    <div class="container">
-        <div class="skills-title reveal">
-            <span>05 / TOOLKIT</span>
-            <h2>
-                <span class="lang-en">Tools behind <em>the work.</em></span>
-                <span class="lang-id">Alat di balik <em>pekerjaan.</em></span>
-            </h2>
-        </div>
-
-        <div class="skills-grid reveal">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Bootstrap</span>
-            <span>CodeIgniter</span>
-            <span>MySQL</span>
-            <span>Figma</span>
-            <span>Canva</span>
-            <span>CapCut</span>
-            <span>Microsoft Office</span>
-            <span>Google Workspace</span>
-            <span>AI Tools</span>
-        </div>
-    </div>
+<div class="container">
+<div class="skills-title reveal">
+<span>05 / TOOLKIT</span>
+<h2>
+<span class="lang-en">Tools behind <em>the work.</em></span>
+<span class="lang-id">Alat di balik <em>pekerjaan.</em></span>
+</h2>
+</div>
+<div class="skills-grid reveal">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Bootstrap</span>
+<span>CodeIgniter</span>
+<span>MySQL</span>
+<span>Figma</span>
+<span>Canva</span>
+<span>CapCut</span>
+<span>Microsoft Office</span>
+<span>Google Workspace</span>
+<span>AI Tools</span>
+</div>
+</div>
 </section>
-
 <!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-
-            <div class="col-lg-6 reveal">
-                <span class="contact-label">06 / CONTACT</span>
-                <h2>
-                    <span class="lang-en">Let's create <br><em>something useful.</em></span>
-                    <span class="lang-id">Mari ciptakan <br><em>sesuatu yang berguna.</em></span>
-                </h2>
-                <p class="lang-en">Open to opportunities involving digital marketing, web development, UI/UX, system analysis, automation, and digital business.</p>
-                <p class="lang-id">Terbuka untuk kesempatan terkait pemasaran digital, pengembangan web, UI/UX, analisis sistem, otomatisasi, dan bisnis digital.</p>
-
-                <div class="contact-info">
-                    <a href="mailto:josiajoseph669@gmail.com" class="magnetic">
-                        <i class="bi bi-envelope"></i> josiajoseph669@gmail.com
+<section class="contact-section" id="contact">
+<div class="container">
+<div class="row g-5 align-items-center">
+<div class="col-lg-6 reveal">
+<span class="contact-label">06 / CONTACT</span>
+<h2>
+<span class="lang-en">Let's create <br/><em>something useful.</em></span>
+<span class="lang-id">Mari ciptakan <br/><em>sesuatu yang berguna.</em></span>
+</h2>
+<p class="lang-en">Open to opportunities involving digital marketing, web development, UI/UX, system analysis, automation, and digital business.</p>
+<p class="lang-id">Terbuka untuk kesempatan terkait pemasaran digital, pengembangan web, UI/UX, analisis sistem, otomatisasi, dan bisnis digital.</p>
+<div class="contact-info">
+<a class="magnetic" href="mailto:josiajoseph669@gmail.com">
+<i class="bi bi-envelope"></i> josiajoseph669@gmail.com
                     </a>
-                    <a href="tel:+6281241776292" class="magnetic">
-                        <i class="bi bi-telephone"></i> +62 812 4177 6292
+<a class="magnetic" href="tel:+6281241776292">
+<i class="bi bi-telephone"></i> +62 812 4177 6292
                     </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 reveal">
-                <form id="contactForm" class="contact-form">
-                    <input type="text" id="name" placeholder="Your name" required>
-                    <input type="email" id="email" placeholder="Your email" required>
-                    <textarea id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
-                    
-                    <button type="submit" class="magnetic">
-                        <span class="lang-en">Send via WhatsApp</span>
-                        <span class="lang-id">Kirim via WhatsApp</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                </form>
-            </div>
-
-        </div>
-    </div>
+</div>
+</div>
+<div class="col-lg-6 reveal">
+<form class="contact-form" id="contactForm">
+<input id="name" placeholder="Your name" required="" type="text"/>
+<input id="email" placeholder="Your email" required="" type="email"/>
+<textarea id="message" placeholder="Tell me about your project..." required="" rows="6"></textarea>
+<button class="magnetic" type="submit">
+<span class="lang-en">Send via WhatsApp</span>
+<span class="lang-id">Kirim via WhatsApp</span>
+<i class="bi bi-arrow-up-right"></i>
+</button>
+</form>
+</div>
+</div>
+</div>
 </section>
-
 <!-- FOOTER -->
 <footer>
-    <div class="container">
-        <div class="footer-main reveal">
-            <div>
-                <a href="#home" class="footer-logo">
+<div class="container">
+<div class="footer-main reveal">
+<div>
+<a class="footer-logo" href="#home">
                     J<span>.</span>
-                </a>
-                <p>Digital Marketing × Web Development<br>UI/UX × System Analysis</p>
-            </div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom reveal">
-            <span>© 2026 Josia Joseph Ntahudi</span>
-            <span>Built with HTML × CSS × JavaScript × Bootstrap</span>
-        </div>
-    </div>
+</a>
+<p>Digital Marketing × Web Development<br/>UI/UX × System Analysis</p>
+</div>
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+<div class="footer-bottom reveal">
+<span>© 2026 Josia Joseph Ntahudi</span>
+<span>Built with HTML × CSS × JavaScript × Bootstrap</span>
+</div>
+</div>
 </footer>
-
-<button type="button" id="backTop" class="magnetic" aria-label="Back to top">
-    <i class="bi bi-arrow-up"></i>
+<button aria-label="Back to top" class="magnetic" id="backTop" type="button">
+<i class="bi bi-arrow-up"></i>
 </button>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
-<script>
-    // Mobile-only navigation usability improvements.
-    (() => {
-        const nav = document.getElementById('mainNav');
-        const langButton = document.querySelector('.lang-btn');
-        const langDropdown = document.querySelector('.lang-dropdown');
-        if (nav && window.bootstrap?.Collapse) {
-            nav.querySelectorAll('a.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth < 992 && nav.classList.contains('show')) {
-                        window.bootstrap.Collapse.getOrCreateInstance(nav, { toggle: false }).hide();
-                    }
-                });
-            });
-        }
-        if (langButton && langDropdown) {
-            langButton.addEventListener('click', () => {
-                langButton.setAttribute('aria-expanded', String(langDropdown.classList.contains('active')));
-            });
-            document.addEventListener('click', (event) => {
-                if (!langDropdown.contains(event.target)) langButton.setAttribute('aria-expanded', 'false');
-            });
-            document.querySelectorAll('.lang-option').forEach(button => {
-                button.addEventListener('click', () => langButton.setAttribute('aria-expanded', 'false'));
-            });
-        }
-    })();
-</script>
-
 </body>
 </html>
