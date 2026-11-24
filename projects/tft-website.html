@@ -9,16 +9,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFT Creation Website — Josia</title>
-    <meta name="description" content="TFT Creation Textile website development project by Josia Joseph Ntahudi.">
+    <title>TFT Creation — Website & Admin Dashboard | Josia Portfolio</title>
+    <meta name="description" content="TFT Creation Textile website and administration platform: fabric catalog, product filters, sample request flow, CMS, CodeIgniter, PHP, MySQL, Bootstrap, JavaScript and VS Code.">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../design.css">
+    <link rel="stylesheet" href="../case-gallery.css">
+    <link rel="stylesheet" href="../tft-restored.css">
+    <link rel="stylesheet" href="../theme-contrast.css">
 </head>
 
-<body class="project-page">
+<body class="project-page tft-restored-page">
 
 <!-- CUSTOM CURSOR -->
 <div class="cursor-dot" data-cursor-dot></div>
@@ -44,28 +48,28 @@
             
             <!-- DROPDOWN BAHASA MODERN -->
             <div class="lang-dropdown">
-                <button class="lang-btn magnetic">
+                <button class="lang-btn magnetic" type="button" aria-expanded="false" aria-label="Select language">
                     <i class="bi bi-globe2"></i>
                     <span class="current-lang">EN</span>
                     <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
                 </button>
                 <div class="lang-menu">
-                    <button class="lang-option active" data-lang="en">English (EN)</button>
-                    <button class="lang-option" data-lang="id">Indonesia (ID)</button>
+                    <button class="lang-option active" type="button" data-lang="en">English (EN)</button>
+                    <button class="lang-option" type="button" data-lang="id">Indonesia (ID)</button>
                 </div>
             </div>
 
             <!-- Dark Mode Toggle -->
-            <button id="themeToggle" class="theme-toggle magnetic">
+            <button id="themeToggle" class="theme-toggle magnetic" type="button" aria-label="Toggle dark mode" aria-pressed="false">
                 <i class="bi bi-moon-stars"></i>
             </button>
 
             <!-- Back Link -->
-            <a href="../index.html" class="back-link ms-2 d-none d-sm-inline-flex" style="font-weight: 700; font-size: 0.9rem;">
+            <a href="../index.html#projects" class="back-link ms-2 d-none d-sm-inline-flex" style="font-weight: 700; font-size: 0.9rem;">
                 <i class="bi bi-arrow-left"></i> Back
             </a>
             <!-- Back Link Mobile Icon Only -->
-            <a href="../index.html" class="back-link ms-1 d-sm-none" style="font-weight: 700; font-size: 1.2rem;">
+            <a href="../index.html#projects" class="back-link ms-1 d-sm-none" style="font-weight: 700; font-size: 1.2rem;">
                 <i class="bi bi-arrow-left"></i>
             </a>
 
@@ -76,13 +80,13 @@
 <!-- HERO SECTION -->
 <section class="project-hero">
     <div class="container">
-        <div class="project-page-label reveal">TFT CREATION TEXTILE / 03</div>
+        <div class="project-page-label reveal">TFT CREATION TEXTILE / PROJECT 04</div>
         <h1 class="reveal">
-            TFT Creation<br><em>Website Development.</em>
+            TFT Creation<br><em>Website & Admin System.</em>
         </h1>
         <p class="reveal">
-            <span class="lang-en">End-to-end development of the TFT Creation Textile website, from initial concept and interface development to database integration, testing, and deployment.</span>
-            <span class="lang-id">Pengembangan *end-to-end* website TFT Creation Textile, dari konsep awal, antarmuka (UI/UX), hingga integrasi database, pengujian, dan perilisan (deployment).</span>
+            <span class="lang-en">Development of a textile website with an interactive product catalog, fabric discovery tools, sample inquiries, and a dedicated administrative dashboard.</span>
+            <span class="lang-id">Pengembangan website tekstil dengan katalog produk interaktif, filter kain, permintaan sampel, serta dashboard khusus untuk pengelolaan data dan produk.</span>
         </p>
     </div>
 </section>
@@ -92,7 +96,7 @@
     <div class="container">
         <div class="large-image website-preview reveal">
             <!-- Adjusted class for better image handling -->
-            <img class="img-fluid hero-image-adjust" src="../assets/images/website/website-home.jpg" alt="TFT Creation website homepage">
+            <img class="img-fluid hero-image-adjust" src="../assets/images/cases/tft/site-01.webp" alt="Screenshot asli homepage TFT Creation Textile" width="1600" height="838">
         </div>
     </div>
 </section>
@@ -109,132 +113,123 @@
             </div>
             <div class="col-lg-8">
                 <p class="project-big-text reveal">
-                    <span class="lang-en">I developed the TFT Creation website from concept through production as a scalable business web application.</span>
-                    <span class="lang-id">Saya membangun website bisnis TFT Creation dari tahap konsep hingga tahap produksi penuh.</span>
+                    <span class="lang-en">I built a responsive B2B textile website and admin interface to connect customers with fabric products and help administrators manage the catalog.</span>
+                    <span class="lang-id">Saya membangun website bisnis tekstil B2B yang responsif, lengkap dengan katalog kain, fitur pelanggan, dan sistem administrasi produk.</span>
                 </p>
                 <p class="project-text reveal">
-                    <span class="lang-en">The project combines responsive front-end development, interactive JavaScript, custom CSS, CodeIgniter, and MySQL to create a professional digital presence for the textile business.</span>
-                    <span class="lang-id">Projek ini mengkombinasikan pengembangan *front-end* yang responsif, JavaScript interaktif, CSS kustom, *framework* CodeIgniter, dan database MySQL untuk menciptakan profil digital profesional.</span>
+                    <span class="lang-en">The project combines PHP and CodeIgniter on the backend, MySQL for data storage, and HTML, CSS, JavaScript and Bootstrap for responsive, interactive user interfaces. Development used VS Code and XAMPP.</span>
+                    <span class="lang-id">Website dikembangkan menggunakan PHP dan CodeIgniter di backend, MySQL sebagai database, serta HTML, CSS, JavaScript, dan Bootstrap untuk antarmuka responsif. Pengembangan dilakukan melalui VS Code dan XAMPP.</span>
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- WEBSITE GALLERY -->
-<section class="project-section">
-    <div class="container">
-        <div class="project-section-title reveal">
-            <div class="section-kicker">
-                <span class="lang-en">WEBSITE INTERFACE</span>
-                <span class="lang-id">ANTARMUKA WEBSITE</span>
-            </div>
-            <h2>
-                <span class="lang-en">Designed for business.</span>
-                <span class="lang-id">Dirancang untuk bisnis.</span>
-            </h2>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-8 reveal">
-                <div class="website-shot">
-                    <div class="img-wrapper">
-                         <img src="../assets/images/website/website-home.jpg" alt="Homepage" class="img-contain">
-                    </div>
-                    <div class="shot-info">
-                        <div class="shot-number">01</div>Homepage
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 reveal">
-                <div class="website-shot">
-                    <div class="img-wrapper">
-                        <img src="../assets/images/website/website-product.jpg" alt="Product" class="img-contain">
-                    </div>
-                    <div class="shot-info">
-                        <div class="shot-number">02</div>Product
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 reveal">
-                <div class="website-shot">
-                     <div class="img-wrapper">
-                        <img src="../assets/images/website/website-catalog.jpg" alt="Catalog" class="img-contain">
-                     </div>
-                    <div class="shot-info">
-                        <div class="shot-number">03</div>Catalog
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 reveal">
-                <div class="website-shot">
-                    <div class="img-wrapper">
-                         <img src="../assets/images/website/admin_panel.jpg" alt="Admin Panel" class="img-contain">
-                    </div>
-                    <div class="shot-info">
-                        <div class="shot-number">04</div>Admin Panel
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- RESTORED ORIGINAL LAYOUT / UPDATED TIFF CONTENT -->
+<section class="project-section tft-gallery-section" id="customer-gallery">
+ <div class="container">
+  <div class="project-section-title reveal">
+   <div class="section-kicker"><span class="lang-en">CUSTOMER WEBSITE · REAL SCREENSHOTS</span><span class="lang-id">WEBSITE PELANGGAN · SCREENSHOT ASLI</span></div>
+   <h2><span class="lang-en">Explore the <em>website.</em></span><span class="lang-id">Jelajahi <em>website.</em></span></h2>
+   <p class="tft-gallery-lead"><span class="lang-en">From the first impression to browsing fabric categories, product details, and submitting sample requests. Select any screen to enlarge.</span><span class="lang-id">Mulai dari beranda, kategori kain, detail produk hingga formulir permintaan sampel. Klik gambar untuk memperbesar.</span></p>
+  </div>
+  <div class="tft-gallery-shortcuts"><a href="#customer-gallery" class="tft-shortcut active"><i class="bi bi-window"></i><span class="lang-en">Customer website</span><span class="lang-id">Website pelanggan</span></a><a href="#admin-gallery" class="tft-shortcut"><i class="bi bi-speedometer2"></i><span class="lang-en">Admin dashboard</span><span class="lang-id">Dashboard admin</span></a></div>
+  <div class="case-gallery-grid tft-grid"><button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-01.webp" data-caption-en="Homepage TFT Creation" data-caption-id="Halaman utama TFT Creation" aria-label="View screenshot 1: Homepage TFT Creation">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-01.webp" alt="TFT Creation — Homepage TFT Creation" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">01</span><span><span class="lang-en">Homepage TFT Creation</span><span class="lang-id">Halaman utama TFT Creation</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-02.webp" data-caption-en="Business introduction and company strengths" data-caption-id="Profil dan keunggulan perusahaan" aria-label="View screenshot 2: Business introduction and company strengths">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-02.webp" alt="TFT Creation — Business introduction and company strengths" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">02</span><span><span class="lang-en">Business introduction and company strengths</span><span class="lang-id">Profil dan keunggulan perusahaan</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-03.webp" data-caption-en="Fabric categories and product collections" data-caption-id="Kategori kain dan koleksi produk" aria-label="View screenshot 3: Fabric categories and product collections">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-03.webp" alt="TFT Creation — Fabric categories and product collections" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">03</span><span><span class="lang-en">Fabric categories and product collections</span><span class="lang-id">Kategori kain dan koleksi produk</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-04.webp" data-caption-en="Fabric catalog and product filters" data-caption-id="Katalog kain dan filter produk" aria-label="View screenshot 4: Fabric catalog and product filters">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-04.webp" alt="TFT Creation — Fabric catalog and product filters" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">04</span><span><span class="lang-en">Fabric catalog and product filters</span><span class="lang-id">Katalog kain dan filter produk</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-05.webp" data-caption-en="Product detail and sample request" data-caption-id="Detail produk dan permintaan sampel" aria-label="View screenshot 5: Product detail and sample request">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-05.webp" alt="TFT Creation — Product detail and sample request" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">05</span><span><span class="lang-en">Product detail and sample request</span><span class="lang-id">Detail produk dan permintaan sampel</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/site-06.webp" data-caption-en="Customer sample request form" data-caption-id="Formulir permintaan sampel pelanggan" aria-label="View screenshot 6: Customer sample request form">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/site-06.webp" alt="TFT Creation — Customer sample request form" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">06</span><span><span class="lang-en">Customer sample request form</span><span class="lang-id">Formulir permintaan sampel pelanggan</span></span></span>
+  </button></div>
+ </div>
+</section>
+<section class="project-section tft-features-section">
+ <div class="container">
+  <div class="project-section-title reveal">
+   <div class="section-kicker"><span class="lang-en">WEBSITE CAPABILITIES</span><span class="lang-id">FITUR WEBSITE</span></div>
+   <h2><span class="lang-en">Made for <em>real workflows.</em></span><span class="lang-id">Dibuat untuk <em>kebutuhan nyata.</em></span></h2>
+  </div>
+  <div class="tft-feature-grid">
+   <article class="tft-feature-tile reveal"><i class="bi bi-grid-3x3-gap"></i><h3><span class="lang-en">Interactive textile catalog</span><span class="lang-id">Katalog kain interaktif</span></h3><p><span class="lang-en">Fabric collections organized into categories with product details.</span><span class="lang-id">Koleksi kain dikelompokkan menurut kategori dan detail produk.</span></p></article>
+   <article class="tft-feature-tile reveal"><i class="bi bi-funnel"></i><h3><span class="lang-en">Search & filters</span><span class="lang-id">Pencarian & filter</span></h3><p><span class="lang-en">Tools to help customers narrow down relevant materials.</span><span class="lang-id">Fitur pencarian untuk menemukan material yang dibutuhkan.</span></p></article>
+   <article class="tft-feature-tile reveal"><i class="bi bi-chat-left-text"></i><h3><span class="lang-en">Sample & quotation inquiry</span><span class="lang-id">Permintaan sampel & penawaran</span></h3><p><span class="lang-en">A clear path from product exploration to customer inquiry.</span><span class="lang-id">Alur sederhana dari pemilihan produk ke permintaan pelanggan.</span></p></article>
+   <article class="tft-feature-tile reveal"><i class="bi bi-speedometer2"></i><h3><span class="lang-en">Admin management</span><span class="lang-id">Manajemen admin</span></h3><p><span class="lang-en">Product administration, catalog management and dashboard views.</span><span class="lang-id">Pengelolaan produk, katalog, dan tampilan dashboard.</span></p></article>
+  </div>
+ </div>
+</section>
+<section class="project-section tft-gallery-section tft-admin-section" id="admin-gallery">
+ <div class="container">
+  <div class="project-section-title reveal">
+   <div class="section-kicker"><span class="lang-en">ADMIN PORTAL · REAL SCREENSHOTS</span><span class="lang-id">PORTAL ADMIN · SCREENSHOT ASLI</span></div>
+   <h2><span class="lang-en">Behind the <em>catalog.</em></span><span class="lang-id">Di balik <em>katalog.</em></span></h2>
+   <p class="tft-gallery-lead"><span class="lang-en">Dashboard, product management, visitor analytics and product administration screens.</span><span class="lang-id">Tampilan dashboard, pengelolaan produk, analitik pengunjung, dan administrasi katalog.</span></p>
+  </div>
+  <div class="case-gallery-grid tft-grid"><button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-1.webp" data-caption-en="Admin portal sign-in" data-caption-id="Halaman login admin" aria-label="View screenshot 1: Admin portal sign-in">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-1.webp" alt="TFT Creation — Admin portal sign-in" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">01</span><span><span class="lang-en">Admin portal sign-in</span><span class="lang-id">Halaman login admin</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-2.webp" data-caption-en="Admin dashboard overview" data-caption-id="Ringkasan dashboard admin" aria-label="View screenshot 2: Admin dashboard overview">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-2.webp" alt="TFT Creation — Admin dashboard overview" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">02</span><span><span class="lang-en">Admin dashboard overview</span><span class="lang-id">Ringkasan dashboard admin</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-3.webp" data-caption-en="Product catalog management" data-caption-id="Manajemen katalog produk" aria-label="View screenshot 3: Product catalog management">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-3.webp" alt="TFT Creation — Product catalog management" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">03</span><span><span class="lang-en">Product catalog management</span><span class="lang-id">Manajemen katalog produk</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-4.webp" data-caption-en="Website visitor analytics" data-caption-id="Analitik pengunjung website" aria-label="View screenshot 4: Website visitor analytics">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-4.webp" alt="TFT Creation — Website visitor analytics" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">04</span><span><span class="lang-en">Website visitor analytics</span><span class="lang-id">Analitik pengunjung website</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-5.webp" data-caption-en="Fabric collection management" data-caption-id="Pengelolaan koleksi kain" aria-label="View screenshot 5: Fabric collection management">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-5.webp" alt="TFT Creation — Fabric collection management" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">05</span><span><span class="lang-en">Fabric collection management</span><span class="lang-id">Pengelolaan koleksi kain</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-6.webp" data-caption-en="Edit product details" data-caption-id="Pengeditan detail produk" aria-label="View screenshot 6: Edit product details">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-6.webp" alt="TFT Creation — Edit product details" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">06</span><span><span class="lang-en">Edit product details</span><span class="lang-id">Pengeditan detail produk</span></span></span>
+  </button>
+<button class="case-gallery-card case-shot reveal" type="button" data-full="../assets/images/cases/tft/admin-7.webp" data-caption-en="Add new fabric product" data-caption-id="Penambahan produk kain" aria-label="View screenshot 7: Add new fabric product">
+   <span class="case-gallery-image"><img src="../assets/images/cases/tft/admin-7.webp" alt="TFT Creation — Add new fabric product" loading="lazy" decoding="async" width="1600" height="840"><span class="case-gallery-magnify" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span></span>
+   <span class="case-gallery-label"><span class="case-gallery-no">07</span><span><span class="lang-en">Add new fabric product</span><span class="lang-id">Penambahan produk kain</span></span></span>
+  </button></div>
+ </div>
 </section>
 
 <!-- TECHNOLOGY -->
 <section class="technology-section">
-    <div class="container">
-        <div class="project-section-title light reveal">
-            <div class="section-kicker">
-                <span class="lang-en">TECHNOLOGY</span>
-                <span class="lang-id">TEKNOLOGI</span>
-            </div>
-            <h2>
-                <span class="lang-en">Built with a practical stack.</span>
-                <span class="lang-id">Dibuat dengan teknologi praktis.</span>
-            </h2>
-        </div>
-        <div class="technology-grid">
-            <div class="reveal">
-                <i class="bi bi-filetype-html"></i>
-                <h3 class="grid-title">HTML5</h3>
-                <p class="grid-desc">
-                    <span class="lang-en">Semantic structure and responsive page architecture.</span>
-                    <span class="lang-id">Struktur semantik dan arsitektur halaman yang responsif.</span>
-                </p>
-            </div>
-            <div class="reveal">
-                <i class="bi bi-filetype-css"></i>
-                <h3 class="grid-title">CSS</h3>
-                <p class="grid-desc">
-                    <span class="lang-en">Custom responsive styling and visual interaction.</span>
-                    <span class="lang-id">Pengaturan gaya kustom dan desain interaksi visual.</span>
-                </p>
-            </div>
-            <div class="reveal">
-                <i class="bi bi-filetype-js"></i>
-                <h3 class="grid-title">JavaScript</h3>
-                <p class="grid-desc">
-                    <span class="lang-en">Interactive front-end functionality.</span>
-                    <span class="lang-id">Pembuatan fungsi interaktif pada *front-end*.</span>
-                </p>
-            </div>
-            <div class="reveal">
-                <i class="bi bi-code-square"></i>
-                <h3 class="grid-title">CodeIgniter</h3>
-                <p class="grid-desc">
-                    <span class="lang-en">Backend framework for scalable application development.</span>
-                    <span class="lang-id">Framework *backend* untuk pengembangan sistem yang skalabel.</span>
-                </p>
-            </div>
-            <div class="reveal">
-                <i class="bi bi-database"></i>
-                <h3 class="grid-title">MySQL</h3>
-                <p class="grid-desc">
-                    <span class="lang-en">Relational database for dynamic website content.</span>
-                    <span class="lang-id">Sistem database relasional untuk konten dinamis.</span>
-                </p>
-            </div>
-        </div>
-    </div>
+ <div class="container">
+  <div class="project-section-title light reveal">
+   <div class="section-kicker"><span class="lang-en">TECHNOLOGY & TOOLS</span><span class="lang-id">TEKNOLOGI & TOOLS</span></div>
+   <h2><span class="lang-en">From frontend to <em>database.</em></span><span class="lang-id">Dari frontend hingga <em>database.</em></span></h2>
+  </div>
+  <div class="technology-grid tft-stack-grid">
+<div class="reveal"><i class="bi bi-code-square"></i><h3 class="grid-title">PHP & CodeIgniter</h3><p class="grid-desc"><span class="lang-en">Server-side application structure and business logic.</span><span class="lang-id">Struktur aplikasi dan logika bisnis di sisi server.</span></p></div>
+<div class="reveal"><i class="bi bi-database"></i><h3 class="grid-title">MySQL</h3><p class="grid-desc"><span class="lang-en">Relational database for products, categories and business records.</span><span class="lang-id">Database relasional untuk produk, kategori, dan data bisnis.</span></p></div>
+<div class="reveal"><i class="bi bi-filetype-html"></i><h3 class="grid-title">HTML5</h3><p class="grid-desc"><span class="lang-en">Semantic page structure for the customer site and admin portal.</span><span class="lang-id">Struktur halaman semantik untuk website pelanggan dan admin.</span></p></div>
+<div class="reveal"><i class="bi bi-filetype-css"></i><h3 class="grid-title">CSS3</h3><p class="grid-desc"><span class="lang-en">Custom responsive layouts and styles.</span><span class="lang-id">Layout responsif dan tampilan CSS kustom.</span></p></div>
+<div class="reveal"><i class="bi bi-filetype-js"></i><h3 class="grid-title">JavaScript</h3><p class="grid-desc"><span class="lang-en">Interactive product browsing and application interactions.</span><span class="lang-id">Interaksi katalog dan antarmuka aplikasi.</span></p></div>
+<div class="reveal"><i class="bi bi-bootstrap"></i><h3 class="grid-title">Bootstrap</h3><p class="grid-desc"><span class="lang-en">Responsive UI components and layout utilities.</span><span class="lang-id">Komponen tampilan dan utilitas layout responsif.</span></p></div>
+<div class="reveal"><i class="bi bi-code-slash"></i><h3 class="grid-title">VS Code</h3><p class="grid-desc"><span class="lang-en">Primary editor for development and maintenance.</span><span class="lang-id">Editor kode untuk pengembangan dan pemeliharaan.</span></p></div>
+<div class="reveal"><i class="bi bi-hdd-network"></i><h3 class="grid-title">XAMPP</h3><p class="grid-desc"><span class="lang-en">Local PHP and database development environment.</span><span class="lang-id">Lingkungan pengembangan lokal PHP dan database.</span></p></div>
+  </div>
+ </div>
 </section>
 
 <!-- VIDEO -->
@@ -334,6 +329,7 @@
 </button>
 
 <script src="../script.js"></script>
+<script src="../case-gallery.js"></script>
 
 </body>
 </html>
